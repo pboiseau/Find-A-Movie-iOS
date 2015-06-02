@@ -77,8 +77,9 @@
 		6B5CB5F51B1DBBEF00CA9F38 /* FindAMovie */ = {
 			isa = PBXGroup;
 			children = (
+				6BF50B8C1B1DC05600456063 /* Models */,
+				6BF50B8B1B1DC04F00456063 /* Controllers */,
 				6B5CB5F81B1DBBEF00CA9F38 /* AppDelegate.swift */,
-				6B5CB5FA1B1DBBEF00CA9F38 /* ViewController.swift */,
 				6B5CB5FC1B1DBBEF00CA9F38 /* Main.storyboard */,
 				6B5CB5FF1B1DBBEF00CA9F38 /* Images.xcassets */,
 				6B5CB6011B1DBBEF00CA9F38 /* LaunchScreen.xib */,
@@ -110,6 +111,21 @@
 				6B5CB60D1B1DBBEF00CA9F38 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BF50B8B1B1DC04F00456063 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CB5FA1B1DBBEF00CA9F38 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6BF50B8C1B1DC05600456063 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +425,7 @@
 				6B5CB6141B1DBBEF00CA9F38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B5CB6151B1DBBEF00CA9F38 /* Build configuration list for PBXNativeTarget "FindAMovieTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				6B5CB6171B1DBBEF00CA9F38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
