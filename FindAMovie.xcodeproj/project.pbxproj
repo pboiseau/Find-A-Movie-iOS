@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B5CB5F91B1DBBEF00CA9F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CB5F81B1DBBEF00CA9F38 /* AppDelegate.swift */; };
+		6B5CB5FB1B1DBBEF00CA9F38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CB5FA1B1DBBEF00CA9F38 /* ViewController.swift */; };
+		6B5CB5FE1B1DBBEF00CA9F38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CB5FC1B1DBBEF00CA9F38 /* Main.storyboard */; };
+		6B5CB6001B1DBBEF00CA9F38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CB5FF1B1DBBEF00CA9F38 /* Images.xcassets */; };
+		6B5CB6031B1DBBEF00CA9F38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CB6011B1DBBEF00CA9F38 /* LaunchScreen.xib */; };
+		6B5CB60F1B1DBBEF00CA9F38 /* FindAMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B5CB6091B1DBBEF00CA9F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5CB5EB1B1DBBEF00CA9F38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B5CB5F21B1DBBEF00CA9F38;
+			remoteInfo = FindAMovie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B5CB5F31B1DBBEF00CA9F38 /* FindAMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindAMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5CB5F71B1DBBEF00CA9F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5CB5F81B1DBBEF00CA9F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B5CB5FA1B1DBBEF00CA9F38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B5CB5FD1B1DBBEF00CA9F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B5CB5FF1B1DBBEF00CA9F38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6B5CB6021B1DBBEF00CA9F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6B5CB6081B1DBBEF00CA9F38 /* FindAMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindAMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5CB60D1B1DBBEF00CA9F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAMovieTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B5CB5F01B1DBBEF00CA9F38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5CB6051B1DBBEF00CA9F38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B5CB5EA1B1DBBEF00CA9F38 = {
+			isa = PBXGroup;
+			children = (
+				6B5CB5F51B1DBBEF00CA9F38 /* FindAMovie */,
+				6B5CB60B1B1DBBEF00CA9F38 /* FindAMovieTests */,
+				6B5CB5F41B1DBBEF00CA9F38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B5CB5F41B1DBBEF00CA9F38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CB5F31B1DBBEF00CA9F38 /* FindAMovie.app */,
+				6B5CB6081B1DBBEF00CA9F38 /* FindAMovieTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B5CB5F51B1DBBEF00CA9F38 /* FindAMovie */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CB5F81B1DBBEF00CA9F38 /* AppDelegate.swift */,
+				6B5CB5FA1B1DBBEF00CA9F38 /* ViewController.swift */,
+				6B5CB5FC1B1DBBEF00CA9F38 /* Main.storyboard */,
+				6B5CB5FF1B1DBBEF00CA9F38 /* Images.xcassets */,
+				6B5CB6011B1DBBEF00CA9F38 /* LaunchScreen.xib */,
+				6B5CB5F61B1DBBEF00CA9F38 /* Supporting Files */,
+			);
+			path = FindAMovie;
+			sourceTree = "<group>";
+		};
+		6B5CB5F61B1DBBEF00CA9F38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CB5F71B1DBBEF00CA9F38 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B5CB60B1B1DBBEF00CA9F38 /* FindAMovieTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */,
+				6B5CB60C1B1DBBEF00CA9F38 /* Supporting Files */,
+			);
+			path = FindAMovieTests;
+			sourceTree = "<group>";
+		};
+		6B5CB60C1B1DBBEF00CA9F38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CB60D1B1DBBEF00CA9F38 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B5CB5F21B1DBBEF00CA9F38 /* FindAMovie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B5CB6121B1DBBEF00CA9F38 /* Build configuration list for PBXNativeTarget "FindAMovie" */;
+			buildPhases = (
+				6B5CB5EF1B1DBBEF00CA9F38 /* Sources */,
+				6B5CB5F01B1DBBEF00CA9F38 /* Frameworks */,
+				6B5CB5F11B1DBBEF00CA9F38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindAMovie;
+			productName = FindAMovie;
+			productReference = 6B5CB5F31B1DBBEF00CA9F38 /* FindAMovie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B5CB6071B1DBBEF00CA9F38 /* FindAMovieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B5CB6151B1DBBEF00CA9F38 /* Build configuration list for PBXNativeTarget "FindAMovieTests" */;
+			buildPhases = (
+				6B5CB6041B1DBBEF00CA9F38 /* Sources */,
+				6B5CB6051B1DBBEF00CA9F38 /* Frameworks */,
+				6B5CB6061B1DBBEF00CA9F38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B5CB60A1B1DBBEF00CA9F38 /* PBXTargetDependency */,
+			);
+			name = FindAMovieTests;
+			productName = FindAMovieTests;
+			productReference = 6B5CB6081B1DBBEF00CA9F38 /* FindAMovieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B5CB5EB1B1DBBEF00CA9F38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Hetic;
+				TargetAttributes = {
+					6B5CB5F21B1DBBEF00CA9F38 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					6B5CB6071B1DBBEF00CA9F38 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 6B5CB5F21B1DBBEF00CA9F38;
+					};
+				};
+			};
+			buildConfigurationList = 6B5CB5EE1B1DBBEF00CA9F38 /* Build configuration list for PBXProject "FindAMovie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B5CB5EA1B1DBBEF00CA9F38;
+			productRefGroup = 6B5CB5F41B1DBBEF00CA9F38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B5CB5F21B1DBBEF00CA9F38 /* FindAMovie */,
+				6B5CB6071B1DBBEF00CA9F38 /* FindAMovieTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B5CB5F11B1DBBEF00CA9F38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5CB5FE1B1DBBEF00CA9F38 /* Main.storyboard in Resources */,
+				6B5CB6031B1DBBEF00CA9F38 /* LaunchScreen.xib in Resources */,
+				6B5CB6001B1DBBEF00CA9F38 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5CB6061B1DBBEF00CA9F38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B5CB5EF1B1DBBEF00CA9F38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5CB5FB1B1DBBEF00CA9F38 /* ViewController.swift in Sources */,
+				6B5CB5F91B1DBBEF00CA9F38 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5CB6041B1DBBEF00CA9F38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5CB60F1B1DBBEF00CA9F38 /* FindAMovieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B5CB60A1B1DBBEF00CA9F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B5CB5F21B1DBBEF00CA9F38 /* FindAMovie */;
+			targetProxy = 6B5CB6091B1DBBEF00CA9F38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B5CB5FC1B1DBBEF00CA9F38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5CB5FD1B1DBBEF00CA9F38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B5CB6011B1DBBEF00CA9F38 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5CB6021B1DBBEF00CA9F38 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B5CB6101B1DBBEF00CA9F38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B5CB6111B1DBBEF00CA9F38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B5CB6131B1DBBEF00CA9F38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FindAMovie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6B5CB6141B1DBBEF00CA9F38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FindAMovie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6B5CB6161B1DBBEF00CA9F38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FindAMovieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindAMovie.app/FindAMovie";
+			};
+			name = Debug;
+		};
+		6B5CB6171B1DBBEF00CA9F38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FindAMovieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindAMovie.app/FindAMovie";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B5CB5EE1B1DBBEF00CA9F38 /* Build configuration list for PBXProject "FindAMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5CB6101B1DBBEF00CA9F38 /* Debug */,
+				6B5CB6111B1DBBEF00CA9F38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B5CB6121B1DBBEF00CA9F38 /* Build configuration list for PBXNativeTarget "FindAMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5CB6131B1DBBEF00CA9F38 /* Debug */,
+				6B5CB6141B1DBBEF00CA9F38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6B5CB6151B1DBBEF00CA9F38 /* Build configuration list for PBXNativeTarget "FindAMovieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5CB6161B1DBBEF00CA9F38 /* Debug */,
+				6B5CB6171B1DBBEF00CA9F38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B5CB5EB1B1DBBEF00CA9F38 /* Project object */;
+}
