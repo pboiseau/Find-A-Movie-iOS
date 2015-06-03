@@ -14,7 +14,7 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         
         Category().getCategories()
-
+        
     }
 
     override func didReceiveMemoryWarning() {
