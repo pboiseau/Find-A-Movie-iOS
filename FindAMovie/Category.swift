@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Category {
     
@@ -14,7 +15,7 @@ class Category {
     
     let categoryUrl = "genre/movie/list"
     
-    func getCategories() {
+    func getCategories_Old() {
         
         let url = NSURL(string: "\(api.baseUrl())\(categoryUrl)?api_key=\(api.apiKey)")!
         
@@ -38,6 +39,16 @@ class Category {
                 
         task.resume()
     
+    }
+    
+    func getCategories() {
+        
+        Alamofire.request(.GET, "\(api.apiUrl)\(categoryUrl)?api_key=\(api.apiKey)")
+            .responseJSON{ (request, response, data, error) in
+                
+            println(data)
+        }
+        
     }
     
 }

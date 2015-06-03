@@ -77,3 +77,6 @@ numbers.map(tripleFunction)
 
 // Rule #6: Ignoring Parentheses
 [1,2,3,4,5].map {$0 * 3}
+
+
+
