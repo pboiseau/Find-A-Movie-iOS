@@ -7,24 +7,61 @@
 //
 
 import UIKit
+import Alamofire
 
-class CategoryViewController: UIViewController {
-
+class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var categoryTableView: UITableView!
+    
+    let api = MovieDbService()
+    
+    let categories = ["Action", "Comedie", "Drame", "Policier", "Romance", "Western"]
+    
+    let textCellIdentifier = "TextCell"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Category().getCategories()
+        categoryTableView.delegate = self
+        categoryTableView.dataSource = self
+        
+        MovieDbService().getCategories()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let row = indexPath.row
+        cell.textLabel?.text = categories[row]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        println(categories[row])
+    }
+    
     @IBAction func validateCategory(sender: AnyObject) {
         
     }
     
-
+    
 }

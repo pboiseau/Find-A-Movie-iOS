@@ -7,48 +7,15 @@
 //
 
 import Foundation
-import Alamofire
 
-class Category {
+class Category: NSObject {
     
-    let api = MovieDbApi()
+    var id: Int
+    var name: String
     
-    let categoryUrl = "genre/movie/list"
-    
-    func getCategories_Old() {
-        
-        let url = NSURL(string: "\(api.baseUrl())\(categoryUrl)?api_key=\(api.apiKey)")!
-        
-        let request = NSMutableURLRequest(URL: url)
-        
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        let session = NSURLSession.sharedSession()
-        
-        // closure
-        let task = session.dataTaskWithRequest(request) {
-            (data: NSData!, response: NSURLResponse!, error: NSError!) in
-            
-            if error != nil {
-                // Handle error...
-                return
-            }
-            
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
-        }
-                
-        task.resume()
-    
-    }
-    
-    func getCategories() {
-        
-        Alamofire.request(.GET, "\(api.apiUrl)\(categoryUrl)?api_key=\(api.apiKey)")
-            .responseJSON{ (request, response, data, error) in
-                
-            println(data)
-        }
-        
+    init(id: Int, name: String){
+        self.id = id
+        self.name = name
     }
     
 }
