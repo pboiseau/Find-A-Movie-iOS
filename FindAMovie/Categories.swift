@@ -10,9 +10,13 @@ import Foundation
 
 class Categories: NSObject {
     
+    var list: [String: AnyObject]
+    
     init(categoriesDictionary: [String: AnyObject]) {
         
+        println("Categories")
         println(categoriesDictionary)
+        self.list = categoriesDictionary
         
     }
 }

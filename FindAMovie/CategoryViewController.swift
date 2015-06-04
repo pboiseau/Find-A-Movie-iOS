@@ -26,7 +26,11 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         categoryTableView.delegate = self
         categoryTableView.dataSource = self
         
-        MovieDbService().getCategories()
+        MovieDbService().getCategories {
+            (let Categories) in
+            
+            println("Controller")
+        }
         
     }
     

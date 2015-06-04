@@ -14,14 +14,19 @@ class MovieDbService {
     
     let movieDbBaseUrl = "http://api.themoviedb.org/3/"
     
-    func getCategories() {
+    func getCategories(completion: (Categories?) -> Void) {
         
         let networkOperation = NetworkOperation(url: "\(movieDbBaseUrl)genre/movie/list?api_key=\(apiKey)")
         
         networkOperation.executeRequest {
-            (let categories) in
+            (let categoriesJSON) in
             
-            println(categories)
+            if let categories = categoriesJSON {
+                var categories = Categories(categoriesDictionary: categories)
+                
+                println(categories.list)
+            }
+            
         }
         
     }
@@ -29,5 +34,3 @@ class MovieDbService {
     
     
 }
-
-
