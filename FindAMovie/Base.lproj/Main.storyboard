@@ -114,15 +114,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="validateCategory:" destination="fcb-Pb-SwX" eventType="touchUpInside" id="qBC-cN-g5d"/>
-                                    <segue destination="uFJ-tn-zTQ" kind="modal" id="cfU-Uk-n0R"/>
+                                    <segue destination="uFJ-tn-zTQ" kind="modal" identifier="displayMovie" id="cfU-Uk-n0R"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Pd-DtQ">
-                                <rect key="frame" x="0.0" y="109" width="320" height="403"/>
+                                <rect key="frame" x="0.0" y="109" width="320" height="405"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.094117647060000004" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="E8W-T1-5B2" rowHeight="70" style="IBUITableViewCellStyleDefault" id="Ogi-Xb-eXd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="E8W-T1-5B2" rowHeight="70" style="IBUITableViewCellStyleDefault" id="Ogi-Xb-eXd">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ogi-Xb-eXd" id="o88-C4-aU1">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -134,10 +133,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.094117647060000004" alpha="0.0" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.094117647060000004" alpha="0.0" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fcb-Pb-SwX" id="acZ-mF-5R9"/>
+                                    <outlet property="delegate" destination="fcb-Pb-SwX" id="IpH-P5-tI0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,7 +155,7 @@
                             <constraint firstItem="HLv-HH-X7v" firstAttribute="top" secondItem="YFA-LG-T0r" secondAttribute="topMargin" constant="109" id="MiG-Vz-gcP"/>
                             <constraint firstItem="biL-0j-upW" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="16" id="Q9p-CF-4QV"/>
                             <constraint firstItem="ChQ-js-h9D" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="S4D-QX-7bJ"/>
-                            <constraint firstItem="ChQ-js-h9D" firstAttribute="top" secondItem="Zfz-Pd-DtQ" secondAttribute="bottom" constant="1" id="WKk-zM-oKw"/>
+                            <constraint firstItem="ChQ-js-h9D" firstAttribute="top" secondItem="Zfz-Pd-DtQ" secondAttribute="bottom" constant="-1" id="WKk-zM-oKw"/>
                             <constraint firstAttribute="centerX" secondItem="Zfz-Pd-DtQ" secondAttribute="centerX" id="XyE-kx-C3v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zfz-Pd-DtQ" secondAttribute="trailing" constant="-16" id="dDg-TG-MhQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HLv-HH-X7v" secondAttribute="trailing" constant="-16" id="dZg-7q-IkV"/>

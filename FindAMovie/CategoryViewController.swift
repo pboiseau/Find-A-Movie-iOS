@@ -14,23 +14,21 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var categoryTableView: UITableView!
     
     let api = MovieDbService()
+    let categoryCell = "categoryCell"
     
     var categoriesList: [Category] = [Category]()
-    
-    let textCellIdentifier = "TextCell"
+    var categories: Categories?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        categoryTableView.delegate = self
-        categoryTableView.dataSource = self
         
         MovieDbService().getCategories {
             (let categoriesObject) in
             
             if let categories = categoriesObject {
                 
+                self.categories = categories
                 self.categoriesList = categories.list
                 self.categoryTableView.reloadData()
             }
@@ -54,7 +52,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(categoryCell, forIndexPath: indexPath) as! UITableViewCell
         let row = indexPath.row
         cell.textLabel?.text = categoriesList[row].name
         
@@ -62,15 +60,35 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
         
-        println(categoriesList[row].id)
-        println(categoriesList[row].name)
+        let cell = tableView.cellForRowAtIndexPath(indexPath)!
+        
+        // if categories fetch from api
+        if let cat = categories {
+            
+            if !contains(cat.currentList, categoriesList[row].id) {
+                cat.currentList.append(categoriesList[row].id)
+            } else {
+                if let index = find(cat.currentList, categoriesList[row].id) {
+                    cat.currentList.removeAtIndex(index)
+                }
+            }
+            
+            println(cat.currentList)
+        }
+        
     }
     
-    @IBAction func validateCategory(sender: AnyObject) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "displayMovie" {
+            let movieViewController = segue.destinationViewController as! MovieViewController
+            movieViewController.categories = self.categories
+        }
         
     }
     

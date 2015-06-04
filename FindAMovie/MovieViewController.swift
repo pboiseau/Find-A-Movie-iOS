@@ -12,4 +12,15 @@ import Alamofire
 
 class MovieViewController: UIViewController {
     
+    var categories: Categories?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
 }

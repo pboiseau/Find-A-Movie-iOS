@@ -10,7 +10,8 @@ import Foundation
 
 class Categories: NSObject {
     
-    var list: [Category]
+    var list: [Category] = [Category]()
+    var currentList: [Int] = [Int]()
     
     init(categoriesDictionary: [String: AnyObject]) {
         

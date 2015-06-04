@@ -79,4 +79,15 @@ numbers.map(tripleFunction)
 [1,2,3,4,5].map {$0 * 3}
 
 
+var arrayTest = [12,25,33,40,25]
+
+if !contains(arrayTest, 1222){
+    println("yes")
+}
+
+find(arrayTest, 33)
+
+println(arrayTest)
+
+
 
