@@ -10,11 +10,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="7Az-Q0-ce5">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="7Az-Q0-ce5">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BONJOUR !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUN-t9-Ey4">
-                    <rect key="frame" x="111" y="388" width="98" height="21"/>
+                    <rect key="frame" x="111" y="388" width="97.5" height="21"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -26,9 +26,13 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="WbM-Me-Rjo" secondAttribute="centerX" id="5PR-uz-sgj"/>
+                <constraint firstAttribute="bottom" secondItem="7Az-Q0-ce5" secondAttribute="bottom" id="Daq-eC-Jr8"/>
                 <constraint firstAttribute="centerY" secondItem="iUN-t9-Ey4" secondAttribute="centerY" constant="-114.5" id="fnr-Ld-gbT"/>
+                <constraint firstItem="7Az-Q0-ce5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nnP-tT-u86"/>
+                <constraint firstAttribute="trailing" secondItem="7Az-Q0-ce5" secondAttribute="trailing" id="r6Y-Vy-nlg"/>
                 <constraint firstAttribute="centerY" secondItem="WbM-Me-Rjo" secondAttribute="centerY" constant="96" id="uxT-td-ESc"/>
                 <constraint firstAttribute="centerX" secondItem="WbM-Me-Rjo" secondAttribute="centerX" id="viP-Rg-wmU"/>
+                <constraint firstItem="7Az-Q0-ce5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vjG-GT-dEY"/>
                 <constraint firstAttribute="centerX" secondItem="iUN-t9-Ey4" secondAttribute="centerX" id="ybJ-ay-k8l"/>
                 <constraint firstAttribute="centerX" secondItem="iUN-t9-Ey4" secondAttribute="centerX" id="zD6-aj-Fre"/>
             </constraints>
