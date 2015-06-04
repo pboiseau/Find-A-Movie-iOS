@@ -15,21 +15,27 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     let api = MovieDbService()
     
-    let categories = ["Action", "Comedie", "Drame", "Policier", "Romance", "Western"]
+    var categoriesList: [Category] = [Category]()
     
     let textCellIdentifier = "TextCell"
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         categoryTableView.delegate = self
         categoryTableView.dataSource = self
         
         MovieDbService().getCategories {
-            (let Categories) in
+            (let categoriesObject) in
             
-            println("Controller")
+            if let categories = categoriesObject {
+                
+                self.categoriesList = categories.list
+                
+            }
+            
         }
         
     }
@@ -43,7 +49,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return categoriesList.count
     }
     
     
@@ -51,7 +57,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         let row = indexPath.row
-        cell.textLabel?.text = categories[row]
+        cell.textLabel?.text = categoriesList[row].name
         
         return cell
     }
@@ -60,7 +66,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        println(categories[row])
+        println(categoriesList[row])
     }
     
     @IBAction func validateCategory(sender: AnyObject) {

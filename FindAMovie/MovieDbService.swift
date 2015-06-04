@@ -24,7 +24,8 @@ class MovieDbService {
             if let categories = categoriesJSON {
                 var categories = Categories(categoriesDictionary: categories)
                 
-                println(categories.list)
+                // callback
+                completion(categories)
             }
             
         }

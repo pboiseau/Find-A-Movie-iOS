@@ -7,10 +7,20 @@ class NetworkOperation {
     
     typealias JSONDictionaryCompletion = ([String: AnyObject]? -> Void)
     
+    /**
+    Initialize NetworkOperation
+    
+    :param: url URL of the web service
+    */
     init(url: String) {
         self.queryURL = url
     }
     
+    /**
+    Execute a GET request to featch data from the web
+    
+    :param: completion Callback to retour JSON Dictionnary
+    */
     func executeRequest(completion: JSONDictionaryCompletion) {
         
         Alamofire

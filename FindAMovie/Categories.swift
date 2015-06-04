@@ -10,13 +10,23 @@ import Foundation
 
 class Categories: NSObject {
     
-    var list: [String: AnyObject]
+    var list: [Category]
     
     init(categoriesDictionary: [String: AnyObject]) {
         
-        println("Categories")
-        println(categoriesDictionary)
-        self.list = categoriesDictionary
+        self.list = [Category]()
+        
+        let categories = categoriesDictionary["genres"] as! [[String:AnyObject]]
+        
+        for category in categories {
+            
+            var id = category["id"] as! Int
+            var name = category["name"] as! String
+            
+            list.append(Category(id: id, name: name))
+            
+        }
         
     }
+
 }
