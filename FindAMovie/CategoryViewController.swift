@@ -19,7 +19,6 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     let textCellIdentifier = "TextCell"
     
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
