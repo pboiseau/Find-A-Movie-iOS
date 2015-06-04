@@ -33,7 +33,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
             if let categories = categoriesObject {
                 
                 self.categoriesList = categories.list
-                
+                self.categoryTableView.reloadData()
             }
             
         }
@@ -66,7 +66,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        println(categoriesList[row])
+        
+        println(categoriesList[row].id)
+        println(categoriesList[row].name)
     }
     
     @IBAction func validateCategory(sender: AnyObject) {
