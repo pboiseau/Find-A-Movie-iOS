@@ -8,15 +8,26 @@
 
 import Foundation
 import UIKit
-import Alamofire
 
 class MovieViewController: UIViewController {
     
     var categories: Categories?
+    let api = MovieDbService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let genres = self.categories?.listToString(type: "AND"){
+            
+            api.getMovies(genres, page: 20) {
+                (let movies) in
+                
+                println(movies)
+                
+            }
+        
+        }
+    
     }
     
     override func didReceiveMemoryWarning() {

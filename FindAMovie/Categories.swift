@@ -29,5 +29,18 @@ class Categories: NSObject {
         }
         
     }
+    
+    func listToString(#type: String) -> String {
+        
+        var genres: [String] = []
+        var separator = (type == "AND") ? "," : "|"
+        
+        for item in currentList {
+            genres.append(String(item))
+        }
+        
+    
+        return join(separator, genres)
+    }
 
 }

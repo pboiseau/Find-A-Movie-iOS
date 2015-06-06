@@ -89,5 +89,17 @@ find(arrayTest, 33)
 
 println(arrayTest)
 
+var genres = [222,32,176,9,7]
+
+
+var genresString: [String] = []
+
+for genre in genres {
+    genresString.append(String(genre))
+}
+
+join(",", genresString)
+
+
 
 
