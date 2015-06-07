@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class Movie {
-
+    
     var id: Int
     var title: String
     var backdropPath: String?
     var overview: String?
     var originalTitle: String
     var releaseDate: String
-    var posterPath: String
+    var posterPath: String?
     
     init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String, posterPath: String){
         
@@ -40,19 +40,25 @@ class Movie {
     
     func downloadImage(size: String = "w500", completion: (UIImage?) -> Void){
         
-        let api = MovieDbService()
-        let imageURL = NSURL(string: api.movieDbImageUrl + size + "/" + self.posterPath)
-        
-        NetworkOperation(url: api.movieDbImageUrl).getDataFromUrl(imageURL!) {
-            (data) in
+        if let poster = self.posterPath {
             
-            dispatch_async(dispatch_get_main_queue()) {
+            let api = MovieDbService()
+            let imageURL = NSURL(string: api.movieDbImageUrl + size + "/" + poster)
+            
+            NetworkOperation(url: api.movieDbImageUrl).getDataFromUrl(imageURL!) {
+                (data) in
                 
-                println("Finished downloading")
-                var image = UIImage(data: data!)
-                completion(image)
+                dispatch_async(dispatch_get_main_queue()) {
+                    
+                    println("Finished downloading")
+                    var image = UIImage(data: data!)
+                    completion(image)
+                }
+                
             }
             
+        } else {
+            println("This image doesn't have poster")
         }
     }
     

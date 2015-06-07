@@ -15,6 +15,8 @@ class MovieViewController: UIViewController {
         
     @IBOutlet var moviePoster: UIImageView!
     
+    @IBOutlet var movieDescription: UITextView!
+    
     var categories: Categories?
     var movies: Movies?
     
@@ -23,6 +25,7 @@ class MovieViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.movieDescription.editable = false
         
         if let genres = self.categories?.listToString(type: "AND"){
             
@@ -30,20 +33,23 @@ class MovieViewController: UIViewController {
                 (let moviesObject) in
                 
                 self.movies = moviesObject
-                var currentMovie = moviesObject!.next()
+                self.nextMovie(nil)
                 
-                self.movieTitle.text = currentMovie.title
             }
             
         }
         
     }
     
-    @IBAction func nextMovie(sender: AnyObject) {
+    @IBAction func nextMovie(sender: UIButton?) {
     
         var nextMovie = movies!.next()
         
         self.movieTitle.text = nextMovie.title
+        
+        if let description = nextMovie.overview {
+            self.movieDescription.text = description
+        }
         
         nextMovie.downloadImage {
             (let image) in
@@ -51,5 +57,9 @@ class MovieViewController: UIViewController {
             self.moviePoster.image = image
         }
         
+    }
+    
+    @IBAction func backToCategory(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: {})
     }
 }
