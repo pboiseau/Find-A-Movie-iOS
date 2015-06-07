@@ -34,10 +34,20 @@ class Movies: NSObject {
         }
     }
     
-    func next() -> Movie {
+    /**
+    Iterator to the next movie in the list
+    
+    :returns: Movie 
+    */
+    func next() -> Movie? {
+        
         
         if self.cursor >= self.list.count {
             self.cursor = 0
+        }
+        
+        if self.list.count == 0 {
+            return nil
         }
         
         var movie = self.list[self.cursor]

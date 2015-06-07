@@ -23,6 +23,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         super.viewDidLoad()
         
+        println("category")
+        
         MovieDbService().getCategories {
             (let categoriesObject) in
             

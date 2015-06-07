@@ -19,7 +19,7 @@ class Movie {
     var releaseDate: String
     var posterPath: String?
     
-    init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String, posterPath: String){
+    init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String, posterPath: String?){
         
         self.id = id
         self.title = title
@@ -32,9 +32,12 @@ class Movie {
             self.overview = overview!
         }
         
+        if let poster = posterPath {
+            self.posterPath = poster
+        }
+        
         self.originalTitle = originalTitle
         self.releaseDate = releaseDate
-        self.posterPath = posterPath
         
     }
     

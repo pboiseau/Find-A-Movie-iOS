@@ -46,6 +46,8 @@ class MovieDbService {
             if let api_movies = moviesJSON {
                 var movies = Movies(moviesDictionary: api_movies)
                 
+                println(moviesJSON)
+                
                 // callback
                 completion(movies)
             }

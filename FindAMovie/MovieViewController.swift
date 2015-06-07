@@ -12,7 +12,7 @@ import UIKit
 class MovieViewController: UIViewController {
     
     @IBOutlet var movieTitle: UILabel!
-        
+    
     @IBOutlet var moviePoster: UIImageView!
     
     @IBOutlet var movieDescription: UITextView!
@@ -42,19 +42,20 @@ class MovieViewController: UIViewController {
     }
     
     @IBAction func nextMovie(sender: UIButton?) {
-    
-        var nextMovie = movies!.next()
         
-        self.movieTitle.text = nextMovie.title
-        
-        if let description = nextMovie.overview {
-            self.movieDescription.text = description
-        }
-        
-        nextMovie.downloadImage {
-            (let image) in
+        if let nextMovie = movies!.next() {
             
-            self.moviePoster.image = image
+            self.movieTitle.text = nextMovie.title
+            
+            if let description = nextMovie.overview {
+                self.movieDescription.text = description
+            }
+            
+            nextMovie.downloadImage {
+                (let image) in
+                
+                self.moviePoster.image = image
+            }
         }
         
     }
