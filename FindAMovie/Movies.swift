@@ -13,19 +13,18 @@ import Foundation
 class Movies: NSObject {
     
     var list: [Movie] = [Movie]()
+    var cursor: Int = 0
     
     init(moviesDictionary: [String: AnyObject]) {
-        
-        self.list = [Movie]()
-        
+                
         let movies = moviesDictionary["results"] as! [[String:AnyObject]]
         
         for movie in movies {
             
             var id = movie["id"] as! Int
             var title = movie["title"] as! String
-            var backdropPath = movie["backdrop_path"] as! String
-            var overview = movie["overview"] as! String
+            var backdropPath = movie["backdrop_path"] as? String
+            var overview = movie["overview"] as? String
             var originalTitle = movie["original_title"] as! String
             var releaseDate = movie["release_date"] as! String
             var posterPath = movie["poster_path"] as! String
@@ -33,6 +32,18 @@ class Movies: NSObject {
             list.append(Movie(id: id, title: title, backdropPath: backdropPath, overview: overview, originalTitle: originalTitle, releaseDate: releaseDate, posterPath: posterPath))
             
         }
+    }
+    
+    func next() -> Movie {
+        
+        if self.cursor >= self.list.count {
+            self.cursor = 0
+        }
+        
+        var movie = self.list[self.cursor]
+        self.cursor++
+        
+        return movie
     }
     
 }

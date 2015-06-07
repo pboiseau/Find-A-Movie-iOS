@@ -100,6 +100,13 @@ for genre in genres {
 
 join(",", genresString)
 
+func testparam(name: String = "Paul") -> String {
+    return name
+}
+
+testparam(name: "adrien")
+
+
 
 
 

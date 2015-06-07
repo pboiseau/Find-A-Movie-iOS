@@ -11,27 +11,45 @@ import UIKit
 
 class MovieViewController: UIViewController {
     
+    @IBOutlet var movieTitle: UILabel!
+        
+    @IBOutlet var moviePoster: UIImageView!
+    
     var categories: Categories?
+    var movies: Movies?
+    
     let api = MovieDbService()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         if let genres = self.categories?.listToString(type: "AND"){
             
             api.getMovies(genres, page: 20) {
-                (let movies) in
+                (let moviesObject) in
                 
-                println(movies)
+                self.movies = moviesObject
+                var currentMovie = moviesObject!.next()
                 
+                self.movieTitle.text = currentMovie.title
             }
-        
+            
         }
-    
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func nextMovie(sender: AnyObject) {
+    
+        var nextMovie = movies!.next()
+        
+        self.movieTitle.text = nextMovie.title
+        
+        nextMovie.downloadImage {
+            (let image) in
+            
+            self.moviePoster.image = image
+        }
+        
     }
-
 }

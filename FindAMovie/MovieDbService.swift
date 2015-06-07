@@ -13,6 +13,7 @@ class MovieDbService {
     let apiKey = "061aa72cb2da19956a42cf429bbe0e0d"
     let language = "fr"
     let movieDbBaseUrl = "http://api.themoviedb.org/3/"
+    let movieDbImageUrl = "http://image.tmdb.org/t/p/"
     
     func getCategories(completion: (Categories?) -> Void) {
         
@@ -42,8 +43,6 @@ class MovieDbService {
         networkOperation.executeRequest {
             (let moviesJSON) in
             
-            println(moviesJSON)
-        
             if let api_movies = moviesJSON {
                 var movies = Movies(moviesDictionary: api_movies)
                 

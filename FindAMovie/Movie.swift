@@ -7,24 +7,53 @@
 //
 
 import Foundation
+import UIKit
 
 class Movie {
 
     var id: Int
     var title: String
-    var backdropPath: String
-    var overview: String
+    var backdropPath: String?
+    var overview: String?
     var originalTitle: String
     var releaseDate: String
     var posterPath: String
     
-    init(id: Int, title: String, backdropPath: String, overview: String, originalTitle: String, releaseDate: String, posterPath: String){
+    init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String, posterPath: String){
+        
         self.id = id
         self.title = title
-        self.backdropPath = backdropPath
-        self.overview = overview
+        
+        if let backdrop = backdropPath {
+            self.backdropPath = backdrop
+        }
+        
+        if let over = overview {
+            self.overview = overview!
+        }
+        
         self.originalTitle = originalTitle
         self.releaseDate = releaseDate
         self.posterPath = posterPath
+        
     }
+    
+    func downloadImage(size: String = "w500", completion: (UIImage?) -> Void){
+        
+        let api = MovieDbService()
+        let imageURL = NSURL(string: api.movieDbImageUrl + size + "/" + self.posterPath)
+        
+        NetworkOperation(url: api.movieDbImageUrl).getDataFromUrl(imageURL!) {
+            (data) in
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                
+                println("Finished downloading")
+                var image = UIImage(data: data!)
+                completion(image)
+            }
+            
+        }
+    }
+    
 }

@@ -183,9 +183,55 @@
                     <view key="view" contentMode="scaleToFill" id="fyJ-Uy-E3C">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="DJf-DV-6aE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thc-Tl-hIZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0d-Jt-BTC">
+                                <rect key="frame" x="35" y="518" width="39" height="30"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextMovie:" destination="uFJ-tn-zTQ" eventType="touchUpInside" id="XK1-Jx-Vy7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49o-eB-FJI">
+                                <rect key="frame" x="35" y="342" width="250" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="jG9-CS-o0q"/>
+                                    <constraint firstAttribute="height" constant="45" id="wGp-hM-dee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w0M-JT-VX3" firstAttribute="top" secondItem="DJf-DV-6aE" secondAttribute="bottom" id="BZc-3k-pSC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="49o-eB-FJI" secondAttribute="trailing" constant="19" id="GDp-1f-1Qt"/>
+                            <constraint firstItem="thc-Tl-hIZ" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" constant="-16" id="HXy-FE-uJ5"/>
+                            <constraint firstItem="w0M-JT-VX3" firstAttribute="top" secondItem="thc-Tl-hIZ" secondAttribute="bottom" id="MNZ-ls-l77"/>
+                            <constraint firstItem="thc-Tl-hIZ" firstAttribute="top" secondItem="fyJ-Uy-E3C" secondAttribute="topMargin" id="SVE-I7-s3w"/>
+                            <constraint firstItem="DJf-DV-6aE" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" constant="-16" id="Sdb-Xb-0yY"/>
+                            <constraint firstItem="49o-eB-FJI" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" constant="19" id="V21-0L-vg9"/>
+                            <constraint firstItem="w0M-JT-VX3" firstAttribute="top" secondItem="49o-eB-FJI" secondAttribute="bottom" constant="181" id="WCo-9Q-Vsg"/>
+                            <constraint firstItem="DJf-DV-6aE" firstAttribute="top" secondItem="fyJ-Uy-E3C" secondAttribute="topMargin" id="fJC-hU-wIN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="thc-Tl-hIZ" secondAttribute="trailing" constant="-16" id="nae-cX-EPn"/>
+                            <constraint firstItem="49o-eB-FJI" firstAttribute="top" secondItem="RJw-Uh-JU0" secondAttribute="bottom" constant="322" id="uw4-iL-Hsa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DJf-DV-6aE" secondAttribute="trailing" constant="-16" id="wPA-X9-oMT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gzg-XY-qZN"/>
+                    <connections>
+                        <outlet property="moviePoster" destination="thc-Tl-hIZ" id="6Cz-Xz-Fe5"/>
+                        <outlet property="movieTitle" destination="49o-eB-FJI" id="5m4-4u-yUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mG3-aM-LjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

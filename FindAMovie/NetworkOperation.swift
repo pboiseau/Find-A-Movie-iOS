@@ -48,4 +48,19 @@ class NetworkOperation {
         
     }
     
+    func getDataFromUrl(urL: NSURL, completion: ((data: NSData?) -> Void)) {
+        
+        NSURLSession.sharedSession().dataTaskWithURL(urL) {
+            (data, response, error) in
+            
+            if let error = error {
+                println(error)
+            }
+            
+            completion(data: data)
+            
+            }.resume()
+        
+    }
+    
 }
