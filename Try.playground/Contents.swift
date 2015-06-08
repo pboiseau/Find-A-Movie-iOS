@@ -91,6 +91,11 @@ println(arrayTest)
 
 var genres = [222,32,176,9,7]
 
+var test = genres.generate()
+test.next()
+test.next()
+test.next()
+
 
 var genresString: [String] = []
 
@@ -105,6 +110,13 @@ func testparam(name: String = "Paul") -> String {
 }
 
 testparam(name: "adrien")
+
+var current_page = 3
+var max_page = 7
+
+let page = (++current_page <= max_page) ? current_page : 1
+
+
 
 
 

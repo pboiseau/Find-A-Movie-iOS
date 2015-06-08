@@ -13,11 +13,21 @@ import Foundation
 class Movies: NSObject {
     
     var list: [Movie] = [Movie]()
-    var cursor: Int = 0
+    var genres: String
     
-    init(moviesDictionary: [String: AnyObject]) {
-                
+    var total_pages: Int
+    var total_results: Int
+    
+    private var cursor: Int = 0
+    private var iterator: IndexingGenerator<Array<Movie>>
+    
+    init(moviesDictionary: [String: AnyObject], genres: String) {
+        
         let movies = moviesDictionary["results"] as! [[String:AnyObject]]
+        
+        self.total_pages = moviesDictionary["total_pages"] as! Int
+        self.total_results = moviesDictionary["total_results"] as! Int
+        self.genres = genres
         
         for movie in movies {
             
@@ -32,30 +42,30 @@ class Movies: NSObject {
             list.append(Movie(id: id, title: title, backdropPath: backdropPath, overview: overview, originalTitle: originalTitle, releaseDate: releaseDate, posterPath: posterPath))
             
         }
+        
+        self.iterator = list.generate()
     }
     
     /**
     Iterator to the next movie in the list
     
-    :returns: Movie 
+    :returns: Movie
     */
     func next() -> Movie? {
         
-        
-        if self.cursor >= self.list.count {
-            self.cursor = 0
+        if let movie = self.iterator.next() {
+            self.cursor++
+            return movie
         }
         
-        if self.list.count == 0 {
-            return nil
-        }
-        
-        var movie = self.list[self.cursor]
-        self.cursor++
-        
-        return movie
+        return nil
     }
     
+    /**
+    Return the previous movie from the list
+    
+    :returns: Movie
+    */
     func prev() -> Movie? {
         
         if self.list.count == 0 {
@@ -63,7 +73,7 @@ class Movies: NSObject {
         }
         
         if self.cursor <= 0 {
-            self.cursor = self.list.count - 1
+            self.cursor = self.list.endIndex - 1
         } else {
             self.cursor--
         }

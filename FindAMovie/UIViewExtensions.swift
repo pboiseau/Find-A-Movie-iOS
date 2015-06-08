@@ -54,6 +54,35 @@ extension UIView {
         self.layer.addAnimation(slideInFromRight, forKey: "slideInFromRightTransition")
         
     }
+    
+//    func slideTransition(direction: UISwipeGestureRecognizerDirection, durantion: NSTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
+//        
+//        let transition = CATransaction()
+//        var transitionDirection: String?
+//        
+//        // Set its callback delegate to the completionDelegate that was provided (if any)
+//        if let delegate: AnyObject = completionDelegate {
+//            transition.delegate = delegate
+//        }
+//        
+//        if direction == .Left {
+//            transitionDirection = kCATransitionFromLeft
+//        } else if direction == .Right {
+//            transitionDirection = kCATransitionFromRight
+//        }
+//        
+//        // Customize the animation's properties
+//        transition.type = kCATransitionPush
+//        transition.subtype = kCATransitionFromLeft
+//        transition.duration = duration
+//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        transition.fillMode = kCAFillModeRemoved
+//        
+//        // Add the animation to the View's layer
+//        self.layer.addAnimation(transition, forKey: "slideInFromLeftTransition")
+//
+//        
+//    }
 
     
 }

@@ -20,6 +20,8 @@ class MovieViewController: UIViewController {
     var categories: Categories?
     var movies: Movies?
     
+    var current_page: Int = 0
+    
     let api = MovieDbService()
     
     override func viewDidLoad() {
@@ -36,7 +38,6 @@ class MovieViewController: UIViewController {
         rightSwipe.direction = .Right
         
         view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(rightSwipe)
         
         if let genres = self.categories?.listToString(type: "AND"){
             
@@ -45,6 +46,7 @@ class MovieViewController: UIViewController {
                 
                 self.movies = moviesObject
                 self.nextMovie(nil)
+                self.current_page = 1
                 
             }
             
@@ -52,6 +54,42 @@ class MovieViewController: UIViewController {
         
     }
     
+    /**
+    Fetch the next movies from the API using the page number
+    */
+    func fetchNextMovies() {
+        
+        if let genres = self.categories?.listToString(type: "AND"){
+            
+            api.getMovies(genres, page: self.getNextPage()) {
+                (let moviesObject) in
+                
+                self.movies = moviesObject
+                self.nextMovie(nil)
+                
+                println("fetching next movies")
+                
+            }
+    
+        }
+    }
+    
+    /**
+    Get the next page of the API results
+    
+    :returns: Int
+    */
+    func getNextPage() -> Int {
+        let page = (++current_page <= movies!.total_pages) ? current_page : 1
+        println(page)
+        return page
+    }
+    
+    /**
+    Handler to detect swipe and execute action
+    
+    :param: sender
+    */
     func handleSwipes(sender: UISwipeGestureRecognizer) {
         
         if sender.direction == .Left {
@@ -64,6 +102,12 @@ class MovieViewController: UIViewController {
         
     }
     
+    
+    /**
+    Fetch the next movies from the movies object
+    
+    :param: sender
+    */
     @IBAction func nextMovie(sender: UIButton?) {
         
         if let nextMovie = movies!.next() {
@@ -80,10 +124,15 @@ class MovieViewController: UIViewController {
                 self.moviePoster.slideInFromRight(duration: 0.4, completionDelegate: nil)
                 self.moviePoster.image = image
             }
+        } else {
+            fetchNextMovies()
         }
         
     }
     
+    /**
+    Fetch the previous movies from the movies object
+    */
     func prevMovie() {
         
         if let prevMovie = movies!.prev() {
