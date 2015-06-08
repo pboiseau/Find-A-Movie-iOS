@@ -92,5 +92,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
+    @IBAction func backHome(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: {})
+    }
     
 }

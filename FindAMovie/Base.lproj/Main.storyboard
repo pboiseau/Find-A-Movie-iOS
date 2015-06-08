@@ -36,6 +36,13 @@
                                     <segue destination="fcb-Pb-SwX" kind="modal" identifier="displayCategory" id="Hie-EN-OwG"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boisson" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-9b-jeY">
+                                <rect key="frame" x="80" y="64" width="160" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="2c8-PK-HuF"/>
+                                    <constraint firstAttribute="width" constant="160" id="Jye-LX-S1u"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ke1-x5-rNb">
                                 <rect key="frame" x="70" y="410" width="180" height="50"/>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,13 +56,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boisson" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-9b-jeY">
-                                <rect key="frame" x="80" y="64" width="160" height="202"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="202" id="2c8-PK-HuF"/>
-                                    <constraint firstAttribute="width" constant="160" id="Jye-LX-S1u"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -89,8 +89,21 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKz-A0-ej0">
+                                <rect key="frame" x="16" y="21" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="0YD-qj-Yua"/>
+                                    <constraint firstAttribute="height" constant="25" id="yGc-AZ-Mki"/>
+                                </constraints>
+                                <state key="normal" image="arrow-circle-white">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backHome:" destination="fcb-Pb-SwX" eventType="touchUpInside" id="oGZ-ea-hJi"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUEL GENRE DE FILM SOUHAITEZ VOUS REGARDER ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biL-0j-upW">
-                                <rect key="frame" x="35" y="36" width="250" height="55"/>
+                                <rect key="frame" x="35" y="46" width="250" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="29S-Tw-AjH"/>
                                     <constraint firstAttribute="height" constant="55" id="iEe-5X-J9Z"/>
@@ -102,21 +115,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-HH-X7v">
                                 <rect key="frame" x="0.0" y="109" width="320" height="459"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-js-h9D">
-                                <rect key="frame" x="0.0" y="513" width="320" height="55"/>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="c9f-2w-qkG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="VALIDER">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uFJ-tn-zTQ" kind="modal" identifier="displayMovie" id="cfU-Uk-n0R"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Pd-DtQ">
                                 <rect key="frame" x="0.0" y="109" width="320" height="405"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.094117647060000004" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -143,23 +141,40 @@
                                     <outlet property="delegate" destination="fcb-Pb-SwX" id="IpH-P5-tI0"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-js-h9D">
+                                <rect key="frame" x="0.0" y="513" width="320" height="55"/>
+                                <color key="backgroundColor" red="0.29803921570000003" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="c9f-2w-qkG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="VALIDER">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uFJ-tn-zTQ" kind="modal" identifier="displayMovie" id="cfU-Uk-n0R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="biL-0j-upW" secondAttribute="centerX" id="58k-0o-eAh"/>
                             <constraint firstItem="HLv-HH-X7v" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="7E1-Nv-35p"/>
                             <constraint firstItem="Tph-9i-M30" firstAttribute="top" secondItem="HLv-HH-X7v" secondAttribute="bottom" id="8eQ-3Q-Jk2"/>
-                            <constraint firstAttribute="centerY" secondItem="biL-0j-upW" secondAttribute="centerY" constant="220.5" id="H5b-YP-z5J"/>
+                            <constraint firstAttribute="centerY" secondItem="biL-0j-upW" secondAttribute="centerY" constant="210.5" id="H5b-YP-z5J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ChQ-js-h9D" secondAttribute="trailing" constant="-16" id="Hgh-eV-TWi"/>
-                            <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="top" secondItem="biL-0j-upW" secondAttribute="bottom" constant="18" id="I3g-xM-Kzx"/>
+                            <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="top" secondItem="biL-0j-upW" secondAttribute="bottom" constant="8" id="I3g-xM-Kzx"/>
                             <constraint firstItem="HLv-HH-X7v" firstAttribute="top" secondItem="YFA-LG-T0r" secondAttribute="topMargin" constant="109" id="MiG-Vz-gcP"/>
-                            <constraint firstItem="biL-0j-upW" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="16" id="Q9p-CF-4QV"/>
+                            <constraint firstItem="biL-0j-upW" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="26" id="Q9p-CF-4QV"/>
                             <constraint firstItem="ChQ-js-h9D" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="S4D-QX-7bJ"/>
                             <constraint firstItem="ChQ-js-h9D" firstAttribute="top" secondItem="Zfz-Pd-DtQ" secondAttribute="bottom" constant="-1" id="WKk-zM-oKw"/>
                             <constraint firstAttribute="centerX" secondItem="Zfz-Pd-DtQ" secondAttribute="centerX" id="XyE-kx-C3v"/>
+                            <constraint firstItem="SKz-A0-ej0" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" id="YJg-Ga-V1S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zfz-Pd-DtQ" secondAttribute="trailing" constant="-16" id="dDg-TG-MhQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HLv-HH-X7v" secondAttribute="trailing" constant="-16" id="dZg-7q-IkV"/>
                             <constraint firstItem="Tph-9i-M30" firstAttribute="top" secondItem="ChQ-js-h9D" secondAttribute="bottom" id="gzX-Ob-nap"/>
+                            <constraint firstItem="SKz-A0-ej0" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="1" id="hgA-Bs-uYM"/>
                             <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="r5j-a2-uNI"/>
                         </constraints>
                     </view>
@@ -286,6 +301,7 @@
     <resources>
         <image name="Background" width="320" height="568"/>
         <image name="Boisson" width="125" height="154"/>
+        <image name="arrow-circle-white" width="47" height="47"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
