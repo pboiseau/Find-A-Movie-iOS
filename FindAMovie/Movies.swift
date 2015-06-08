@@ -56,4 +56,21 @@ class Movies: NSObject {
         return movie
     }
     
+    func prev() -> Movie? {
+        
+        if self.list.count == 0 {
+            return nil
+        }
+        
+        if self.cursor <= 0 {
+            self.cursor = self.list.count - 1
+        } else {
+            self.cursor--
+        }
+        
+        var movie = self.list[self.cursor]
+        
+        return movie
+    }
+    
 }

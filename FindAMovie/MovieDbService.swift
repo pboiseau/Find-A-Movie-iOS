@@ -33,7 +33,7 @@ class MovieDbService {
         
     }
     
-    func getMovies(genres: String, page: Int, completion: (Movies?) -> Void) {
+    func getMovies(genres: String, page: Int = 1, completion: (Movies?) -> Void) {
         
         let request: String = "\(movieDbBaseUrl)discover/movie?api_key=\(apiKey)&"
         let parameter: String = "page=\(page)&sort_by=popularity.desc&language=\(self.language)&with_genres=\(genres)"
@@ -45,8 +45,6 @@ class MovieDbService {
             
             if let api_movies = moviesJSON {
                 var movies = Movies(moviesDictionary: api_movies)
-                
-                println(moviesJSON)
                 
                 // callback
                 completion(movies)

@@ -22,9 +22,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        println("category")
-        
+                
         MovieDbService().getCategories {
             (let categoriesObject) in
             
