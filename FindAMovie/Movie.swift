@@ -53,7 +53,6 @@ class Movie {
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     
-                    println("Finished downloading")
                     var image = UIImage(data: data!)
                     completion(image)
                 }

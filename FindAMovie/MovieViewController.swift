@@ -77,6 +77,7 @@ class MovieViewController: UIViewController {
             nextMovie.downloadImage {
                 (let image) in
                 
+                self.moviePoster.slideInFromRight(duration: 0.4, completionDelegate: nil)
                 self.moviePoster.image = image
             }
         }
@@ -96,6 +97,7 @@ class MovieViewController: UIViewController {
             prevMovie.downloadImage {
                 (let image) in
                 
+                self.moviePoster.slideInFromLeft(duration: 0.4, completionDelegate: nil)
                 self.moviePoster.image = image
             }
         }
