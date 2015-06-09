@@ -120,5 +120,3 @@ let page = (++current_page <= max_page) ? current_page : 1
 
 
 
-
-

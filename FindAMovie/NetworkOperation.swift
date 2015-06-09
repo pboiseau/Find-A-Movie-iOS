@@ -43,6 +43,7 @@ class NetworkOperation {
                     
                 } else {
                     println("Error: Not a valid HTTP response")
+                    completion(nil)
                 }
         }
         

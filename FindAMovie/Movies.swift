@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 class Movies: NSObject {
     
     var list: [Movie] = [Movie]()

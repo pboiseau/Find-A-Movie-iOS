@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Haneke
 
 class MovieViewController: UIViewController {
     
@@ -72,6 +73,7 @@ class MovieViewController: UIViewController {
             }
     
         }
+        
     }
     
     /**
@@ -118,12 +120,19 @@ class MovieViewController: UIViewController {
                 self.movieDescription.text = description
             }
             
-            nextMovie.downloadImage {
-                (let image) in
-                
-                self.moviePoster.slideInFromRight(duration: 0.3, completionDelegate: nil)
-                self.moviePoster.image = image
+//            OLD VERSION WITHOUT CACHE
+//            nextMovie.downloadImage {
+//                (let image) in
+//                
+//                self.moviePoster.slideInFromRight(duration: 0.3, completionDelegate: nil)
+//                self.moviePoster.image = image
+//            }
+            
+            // Using image cache
+            if let poster = nextMovie.getImageURL() {
+                self.moviePoster.hnk_setImageFromURL(poster)
             }
+                        
         } else {
             fetchNextMovies()
         }
@@ -155,10 +164,12 @@ class MovieViewController: UIViewController {
     }
     
     @IBAction func likeMovie(sender: UIButton) {
-        
+        println("we need to save the movie in the database")
     }
     
     @IBAction func backToCategory(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: {})
     }
+    
+    
 }

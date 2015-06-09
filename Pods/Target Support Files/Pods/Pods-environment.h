@@ -12,3 +12,9 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 2
 #define COCOAPODS_VERSION_PATCH_Alamofire 2
 
+// HanekeSwift
+#define COCOAPODS_POD_AVAILABLE_HanekeSwift
+#define COCOAPODS_VERSION_MAJOR_HanekeSwift 0
+#define COCOAPODS_VERSION_MINOR_HanekeSwift 9
+#define COCOAPODS_VERSION_PATCH_HanekeSwift 1
+

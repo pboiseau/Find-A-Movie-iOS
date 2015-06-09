@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="2047" y="1190"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Movie View Controller-->
         <scene sceneID="kTa-Gk-tMW">
             <objects>
-                <viewController id="13u-0q-1mO" sceneMemberID="viewController">
+                <viewController id="13u-0q-1mO" customClass="DetailMovieViewController" customModule="FindAMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v4N-f3-s3d"/>
                         <viewControllerLayoutGuide type="bottom" id="Q1i-Ls-Ze2"/>

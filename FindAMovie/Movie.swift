@@ -61,7 +61,22 @@ class Movie {
             
         } else {
             println("This image doesn't have poster")
+            
         }
+    }
+    
+    func getImageURL() -> NSURL? {
+        
+        if let poster = self.posterPath {
+            
+            let api = MovieDbService()
+            let imageURL = NSURL(string: api.movieDbImageUrl + "w500/" + poster)
+            
+            return imageURL
+            
+        }
+        
+        return nil
     }
     
 }
