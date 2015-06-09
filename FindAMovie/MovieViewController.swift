@@ -154,6 +154,10 @@ class MovieViewController: UIViewController {
         
     }
     
+    @IBAction func likeMovie(sender: UIButton) {
+        
+    }
+    
     @IBAction func backToCategory(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: {})
     }
