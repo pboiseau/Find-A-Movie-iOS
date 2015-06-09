@@ -121,7 +121,7 @@ class MovieViewController: UIViewController {
             nextMovie.downloadImage {
                 (let image) in
                 
-                self.moviePoster.slideInFromRight(duration: 0.4, completionDelegate: nil)
+                self.moviePoster.slideInFromRight(duration: 0.3, completionDelegate: nil)
                 self.moviePoster.image = image
             }
         } else {
@@ -129,6 +129,7 @@ class MovieViewController: UIViewController {
         }
         
     }
+    
     
     /**
     Fetch the previous movies from the movies object
@@ -146,7 +147,7 @@ class MovieViewController: UIViewController {
             prevMovie.downloadImage {
                 (let image) in
                 
-                self.moviePoster.slideInFromLeft(duration: 0.4, completionDelegate: nil)
+                self.moviePoster.slideInFromLeft(duration: 0.3, completionDelegate: nil)
                 self.moviePoster.image = image
             }
         }
