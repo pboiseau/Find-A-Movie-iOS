@@ -72,7 +72,7 @@ class MovieViewController: UIViewController {
                     println("fetching next movies")
                     
                 } else {
-                    self.backToCategory(nil)
+                    self.setAlert("Films introuvable", message: "Aucun film ne correspond à votre requête. Merci de la modifier et de relancer une recherche")
                 }
                 
             }
@@ -165,6 +165,15 @@ class MovieViewController: UIViewController {
             }
         }
         
+    }
+    
+    func setAlert(title: String, message: String) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alertController.addAction(UIAlertAction(title: "Fermer", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     @IBAction func likeMovie(sender: UIButton) {

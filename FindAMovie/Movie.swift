@@ -16,10 +16,10 @@ class Movie {
     var backdropPath: String?
     var overview: String?
     var originalTitle: String
-    var releaseDate: String
+    var releaseDate: String?
     var posterPath: String?
     
-    init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String, posterPath: String?){
+    init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String?, posterPath: String?){
         
         self.id = id
         self.title = title

@@ -34,7 +34,7 @@ class Movies: NSObject {
             var backdropPath = movie["backdrop_path"] as? String
             var overview = movie["overview"] as? String
             var originalTitle = movie["original_title"] as! String
-            var releaseDate = movie["release_date"] as! String
+            var releaseDate = movie["release_date"] as? String
             var posterPath = movie["poster_path"] as? String
             
             list.append(Movie(id: id, title: title, backdropPath: backdropPath, overview: overview, originalTitle: originalTitle, releaseDate: releaseDate, posterPath: posterPath))

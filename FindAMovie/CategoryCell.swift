@@ -25,6 +25,12 @@ class CategoryCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /**
+    Initialize custom cell
+    
+    :param: categoryTitle: String
+    :param: categoryStatus: Bool
+    */
     func setCell(categoryTitle: String, categoryStatus: Bool) {
         
         self.categoryTitle.text = categoryTitle
@@ -33,6 +39,11 @@ class CategoryCell: UITableViewCell {
         
     }
     
+    /**
+    Switch category status UISwitch
+    
+    :param: state: Bool
+    */
     func switchCategoryState(state: Bool) {
         self.categoryStatus.hidden = !state
         self.categoryStatus.setOn(state, animated: true)
