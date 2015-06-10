@@ -33,10 +33,8 @@ class MovieViewController: UIViewController {
         
         // left swipe
         var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         
         leftSwipe.direction = .Left
-        rightSwipe.direction = .Right
         
         view.addGestureRecognizer(leftSwipe)
         
@@ -53,6 +51,13 @@ class MovieViewController: UIViewController {
             
         }
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
     }
     
     /**

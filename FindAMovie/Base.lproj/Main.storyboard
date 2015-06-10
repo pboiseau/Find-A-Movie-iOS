@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fcb-Pb-SwX" kind="modal" identifier="displayCategory" id="Hie-EN-OwG"/>
+                                    <segue destination="fcb-Pb-SwX" kind="push" identifier="displayCategory" id="Hie-EN-OwG"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boisson" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-9b-jeY">
@@ -160,7 +160,7 @@
             </objects>
             <point key="canvasLocation" x="2476" y="1190"/>
         </scene>
-        <!--Category-->
+        <!--Genres-->
         <scene sceneID="fHd-yG-8K9">
             <objects>
                 <viewController id="fcb-Pb-SwX" customClass="CategoryViewController" customModule="FindAMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUEL GENRE DE FILM SOUHAITEZ VOUS REGARDER ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biL-0j-upW">
-                                <rect key="frame" x="35" y="66" width="250" height="55"/>
+                                <rect key="frame" x="35" y="72" width="250" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="29S-Tw-AjH"/>
                                     <constraint firstAttribute="height" constant="55" id="iEe-5X-J9Z"/>
@@ -197,20 +197,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uFJ-tn-zTQ" kind="modal" identifier="displayMovie" id="cfU-Uk-n0R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKz-A0-ej0">
-                                <rect key="frame" x="16" y="20" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="0YD-qj-Yua"/>
-                                    <constraint firstAttribute="height" constant="35" id="yGc-AZ-Mki"/>
-                                </constraints>
-                                <state key="normal" image="arrow-circle-white">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backHome:" destination="fcb-Pb-SwX" eventType="touchUpInside" id="oGZ-ea-hJi"/>
+                                    <segue destination="uFJ-tn-zTQ" kind="push" identifier="displayMovie" id="cfU-Uk-n0R"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Pd-DtQ">
@@ -260,23 +247,21 @@
                             <constraint firstAttribute="centerX" secondItem="biL-0j-upW" secondAttribute="centerX" id="58k-0o-eAh"/>
                             <constraint firstItem="HLv-HH-X7v" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="7E1-Nv-35p"/>
                             <constraint firstItem="Tph-9i-M30" firstAttribute="top" secondItem="HLv-HH-X7v" secondAttribute="bottom" id="8eQ-3Q-Jk2"/>
-                            <constraint firstAttribute="centerY" secondItem="biL-0j-upW" secondAttribute="centerY" constant="190.5" id="H5b-YP-z5J"/>
+                            <constraint firstAttribute="centerY" secondItem="biL-0j-upW" secondAttribute="centerY" constant="184.5" id="H5b-YP-z5J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ChQ-js-h9D" secondAttribute="trailing" constant="-16" id="Hgh-eV-TWi"/>
-                            <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="top" secondItem="biL-0j-upW" secondAttribute="bottom" constant="13" id="I3g-xM-Kzx"/>
+                            <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="top" secondItem="biL-0j-upW" secondAttribute="bottom" constant="7" id="I3g-xM-Kzx"/>
                             <constraint firstItem="HLv-HH-X7v" firstAttribute="top" secondItem="YFA-LG-T0r" secondAttribute="topMargin" constant="134" id="MiG-Vz-gcP"/>
-                            <constraint firstItem="biL-0j-upW" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="46" id="Q9p-CF-4QV"/>
+                            <constraint firstItem="biL-0j-upW" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="8" id="Q9p-CF-4QV"/>
                             <constraint firstItem="ChQ-js-h9D" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="S4D-QX-7bJ"/>
                             <constraint firstItem="ChQ-js-h9D" firstAttribute="top" secondItem="Zfz-Pd-DtQ" secondAttribute="bottom" constant="-1" id="WKk-zM-oKw"/>
                             <constraint firstAttribute="centerX" secondItem="Zfz-Pd-DtQ" secondAttribute="centerX" id="XyE-kx-C3v"/>
-                            <constraint firstItem="SKz-A0-ej0" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" id="YJg-Ga-V1S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zfz-Pd-DtQ" secondAttribute="trailing" constant="-16" id="dDg-TG-MhQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HLv-HH-X7v" secondAttribute="trailing" constant="-16" id="dZg-7q-IkV"/>
                             <constraint firstItem="Tph-9i-M30" firstAttribute="top" secondItem="ChQ-js-h9D" secondAttribute="bottom" id="gzX-Ob-nap"/>
-                            <constraint firstItem="SKz-A0-ej0" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" id="hgA-Bs-uYM"/>
                             <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="r5j-a2-uNI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Category" id="c7q-gl-Tkh"/>
+                    <navigationItem key="navigationItem" title="Genres" id="c7q-gl-Tkh"/>
                     <connections>
                         <outlet property="categoryTableView" destination="Zfz-Pd-DtQ" id="94u-HS-1d4"/>
                     </connections>
@@ -324,19 +309,6 @@
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alE-4I-Seo">
-                                <rect key="frame" x="16" y="20" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="iml-IX-GMt"/>
-                                    <constraint firstAttribute="height" constant="35" id="yMS-9i-Xq1"/>
-                                </constraints>
-                                <state key="normal" image="arrow-circle-white">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backToCategory:" destination="uFJ-tn-zTQ" eventType="touchUpInside" id="fvw-Jg-r6s"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-Bf-aOG">
                                 <rect key="frame" x="189" y="497" width="45" height="45"/>
                                 <constraints>
@@ -371,12 +343,10 @@
                             <constraint firstItem="w0M-JT-VX3" firstAttribute="top" secondItem="DJf-DV-6aE" secondAttribute="bottom" id="BZc-3k-pSC"/>
                             <constraint firstItem="thc-Tl-hIZ" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" constant="-16" id="MUB-U4-Qua"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MvS-Bf-aOG" secondAttribute="trailing" constant="70" id="Mgy-sR-P6V"/>
-                            <constraint firstItem="alE-4I-Seo" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" id="QqL-7e-3zx"/>
                             <constraint firstItem="f5N-54-AZO" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" constant="-16" id="SAz-AX-q1y"/>
-                            <constraint firstItem="f5N-54-AZO" firstAttribute="top" secondItem="RJw-Uh-JU0" secondAttribute="bottom" constant="260" id="SKD-mn-Rj0"/>
+                            <constraint firstItem="f5N-54-AZO" firstAttribute="top" secondItem="RJw-Uh-JU0" secondAttribute="bottom" constant="216" id="SKD-mn-Rj0"/>
                             <constraint firstItem="DJf-DV-6aE" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" constant="-16" id="Sdb-Xb-0yY"/>
                             <constraint firstItem="w0M-JT-VX3" firstAttribute="top" secondItem="f5N-54-AZO" secondAttribute="bottom" id="VMK-vz-TvX"/>
-                            <constraint firstItem="alE-4I-Seo" firstAttribute="top" secondItem="RJw-Uh-JU0" secondAttribute="bottom" id="apC-TC-KcM"/>
                             <constraint firstItem="w0M-JT-VX3" firstAttribute="top" secondItem="QZg-Qy-Bba" secondAttribute="bottom" constant="25" id="cP8-uh-1Ox"/>
                             <constraint firstItem="w0M-JT-VX3" firstAttribute="top" secondItem="thc-Tl-hIZ" secondAttribute="bottom" id="fF1-2D-RKh"/>
                             <constraint firstItem="DJf-DV-6aE" firstAttribute="top" secondItem="fyJ-Uy-E3C" secondAttribute="topMargin" id="fJC-hU-wIN"/>
@@ -390,9 +360,10 @@
                             <constraint firstItem="QZg-Qy-Bba" firstAttribute="leading" secondItem="fyJ-Uy-E3C" secondAttribute="leadingMargin" constant="70" id="w68-cG-BHr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DJf-DV-6aE" secondAttribute="trailing" constant="-16" id="wPA-X9-oMT"/>
                             <constraint firstItem="QZg-Qy-Bba" firstAttribute="top" secondItem="VMx-Bn-VEE" secondAttribute="bottom" constant="7" id="xU1-2m-5qE"/>
-                            <constraint firstItem="49o-eB-FJI" firstAttribute="top" secondItem="RJw-Uh-JU0" secondAttribute="bottom" constant="276" id="yD7-az-fk8"/>
+                            <constraint firstItem="49o-eB-FJI" firstAttribute="top" secondItem="RJw-Uh-JU0" secondAttribute="bottom" constant="232" id="yD7-az-fk8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="L7Y-gX-jfe"/>
                     <connections>
                         <outlet property="movieDescription" destination="VMx-Bn-VEE" id="rJN-b0-fxO"/>
                         <outlet property="moviePoster" destination="thc-Tl-hIZ" id="6Cz-Xz-Fe5"/>
@@ -411,6 +382,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1pQ-73-XUo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -429,7 +401,6 @@
     <resources>
         <image name="Background" width="320" height="568"/>
         <image name="Boisson" width="125" height="154"/>
-        <image name="arrow-circle-white" width="47" height="47"/>
         <image name="bouton-no" width="50" height="50"/>
         <image name="bouton-validate" width="50" height="50"/>
     </resources>
