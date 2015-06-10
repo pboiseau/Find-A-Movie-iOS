@@ -52,10 +52,11 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(categoryCell, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(categoryCell, forIndexPath: indexPath) as! CategoryCell
         let row = indexPath.row
-        cell.textLabel?.text = categoriesList[row].name
         
+        cell.setCell(categoriesList[row].name, categoryStatus: false)
+                
         return cell
     }
     
@@ -65,16 +66,21 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let row = indexPath.row
         
-        let cell = tableView.cellForRowAtIndexPath(indexPath)!
+        let cell = tableView.cellForRowAtIndexPath(indexPath)! as! CategoryCell
         
         // if categories fetch from api
         if let cat = categories {
             
             if !contains(cat.currentList, categoriesList[row].id) {
                 cat.currentList.append(categoriesList[row].id)
+                
+                cell.switchCategoryState(true)
+                
             } else {
                 if let index = find(cat.currentList, categoriesList[row].id) {
                     cat.currentList.removeAtIndex(index)
+                    
+                    cell.switchCategoryState(false)
                 }
             }
             

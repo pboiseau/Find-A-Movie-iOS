@@ -22,10 +22,19 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boisson" translatesAutoresizingMaskIntoConstraints="NO" id="WbM-Me-Rjo">
                     <rect key="frame" x="98" y="111" width="125" height="154"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_tmdb" translatesAutoresizingMaskIntoConstraints="NO" id="sS1-Zd-Sk9">
+                    <rect key="frame" x="68" y="504" width="185" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="WDg-Ez-Spl"/>
+                        <constraint firstAttribute="width" constant="185" id="dub-5O-bzj"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="sS1-Zd-Sk9" secondAttribute="bottom" constant="25" id="3QR-lo-TfI"/>
                 <constraint firstAttribute="centerX" secondItem="WbM-Me-Rjo" secondAttribute="centerX" id="5PR-uz-sgj"/>
+                <constraint firstAttribute="centerX" secondItem="sS1-Zd-Sk9" secondAttribute="centerX" id="D45-BW-5LR"/>
                 <constraint firstAttribute="bottom" secondItem="7Az-Q0-ce5" secondAttribute="bottom" id="Daq-eC-Jr8"/>
                 <constraint firstAttribute="centerY" secondItem="iUN-t9-Ey4" secondAttribute="centerY" constant="-114.5" id="fnr-Ld-gbT"/>
                 <constraint firstItem="7Az-Q0-ce5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nnP-tT-u86"/>
@@ -50,5 +59,6 @@
     <resources>
         <image name="Background" width="320" height="568"/>
         <image name="Boisson" width="125" height="154"/>
+        <image name="logo_tmdb" width="267" height="56"/>
     </resources>
 </document>

@@ -65,13 +65,18 @@ class MovieViewController: UIViewController {
             api.getMovies(genres, page: self.getNextPage()) {
                 (let moviesObject) in
                 
-                self.movies = moviesObject
-                self.nextMovie(nil)
-                
-                println("fetching next movies")
+                if moviesObject?.list.count > 0 {
+                    
+                    self.movies = moviesObject
+                    self.nextMovie(nil)
+                    println("fetching next movies")
+                    
+                } else {
+                    self.backToCategory(nil)
+                }
                 
             }
-    
+            
         }
         
     }
@@ -120,19 +125,18 @@ class MovieViewController: UIViewController {
                 self.movieDescription.text = description
             }
             
-//            OLD VERSION WITHOUT CACHE
-//            nextMovie.downloadImage {
-//                (let image) in
-//                
-//                self.moviePoster.slideInFromRight(duration: 0.3, completionDelegate: nil)
-//                self.moviePoster.image = image
-//            }
-            
             // Using image cache
             if let poster = nextMovie.getImageURL() {
-                self.moviePoster.hnk_setImageFromURL(poster)
+                
+                self.moviePoster.hnk_setImageFromURL(poster) {
+                    (let image) in
+                    self.moviePoster.slideInFromRight(duration: 0.3, completionDelegate: nil) {
+                        self.moviePoster.image = image
+                    }
+                }
+                
             }
-                        
+            
         } else {
             fetchNextMovies()
         }
@@ -167,7 +171,7 @@ class MovieViewController: UIViewController {
         println("we need to save the movie in the database")
     }
     
-    @IBAction func backToCategory(sender: UIButton) {
+    @IBAction func backToCategory(sender: UIButton?) {
         self.dismissViewControllerAnimated(true, completion: {})
     }
     

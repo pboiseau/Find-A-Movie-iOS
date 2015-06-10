@@ -33,7 +33,7 @@ extension UIView {
         
     }
     
-    func slideInFromRight(duration: NSTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
+    func slideInFromRight(duration: NSTimeInterval = 1.0, completionDelegate: AnyObject? = nil, completion: () -> Void) {
         
         // Create a CATransition animation
         let slideInFromRight = CATransition()
@@ -52,6 +52,8 @@ extension UIView {
         
         // Add the animation to the View's layer
         self.layer.addAnimation(slideInFromRight, forKey: "slideInFromRightTransition")
+        
+        completion()
         
     }
     
