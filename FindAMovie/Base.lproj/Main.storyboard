@@ -173,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUEL GENRE DE FILM SOUHAITEZ VOUS REGARDER ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biL-0j-upW">
-                                <rect key="frame" x="35" y="46" width="250" height="55"/>
+                                <rect key="frame" x="35" y="66" width="250" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="29S-Tw-AjH"/>
                                     <constraint firstAttribute="height" constant="55" id="iEe-5X-J9Z"/>
@@ -183,7 +183,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-HH-X7v">
-                                <rect key="frame" x="0.0" y="109" width="320" height="459"/>
+                                <rect key="frame" x="0.0" y="134" width="320" height="434"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-js-h9D">
                                 <rect key="frame" x="0.0" y="513" width="320" height="55"/>
@@ -214,7 +214,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Pd-DtQ">
-                                <rect key="frame" x="0.0" y="109" width="320" height="405"/>
+                                <rect key="frame" x="0.0" y="134" width="320" height="380"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.094117647060000004" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="categoryCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" rowHeight="70" id="Ogi-Xb-eXd" customClass="CategoryCell" customModule="FindAMovie" customModuleProvider="target">
@@ -260,11 +260,11 @@
                             <constraint firstAttribute="centerX" secondItem="biL-0j-upW" secondAttribute="centerX" id="58k-0o-eAh"/>
                             <constraint firstItem="HLv-HH-X7v" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="7E1-Nv-35p"/>
                             <constraint firstItem="Tph-9i-M30" firstAttribute="top" secondItem="HLv-HH-X7v" secondAttribute="bottom" id="8eQ-3Q-Jk2"/>
-                            <constraint firstAttribute="centerY" secondItem="biL-0j-upW" secondAttribute="centerY" constant="210.5" id="H5b-YP-z5J"/>
+                            <constraint firstAttribute="centerY" secondItem="biL-0j-upW" secondAttribute="centerY" constant="190.5" id="H5b-YP-z5J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ChQ-js-h9D" secondAttribute="trailing" constant="-16" id="Hgh-eV-TWi"/>
-                            <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="top" secondItem="biL-0j-upW" secondAttribute="bottom" constant="8" id="I3g-xM-Kzx"/>
-                            <constraint firstItem="HLv-HH-X7v" firstAttribute="top" secondItem="YFA-LG-T0r" secondAttribute="topMargin" constant="109" id="MiG-Vz-gcP"/>
-                            <constraint firstItem="biL-0j-upW" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="26" id="Q9p-CF-4QV"/>
+                            <constraint firstItem="Zfz-Pd-DtQ" firstAttribute="top" secondItem="biL-0j-upW" secondAttribute="bottom" constant="13" id="I3g-xM-Kzx"/>
+                            <constraint firstItem="HLv-HH-X7v" firstAttribute="top" secondItem="YFA-LG-T0r" secondAttribute="topMargin" constant="134" id="MiG-Vz-gcP"/>
+                            <constraint firstItem="biL-0j-upW" firstAttribute="top" secondItem="m3r-ow-Uwh" secondAttribute="bottom" constant="46" id="Q9p-CF-4QV"/>
                             <constraint firstItem="ChQ-js-h9D" firstAttribute="leading" secondItem="YFA-LG-T0r" secondAttribute="leadingMargin" constant="-16" id="S4D-QX-7bJ"/>
                             <constraint firstItem="ChQ-js-h9D" firstAttribute="top" secondItem="Zfz-Pd-DtQ" secondAttribute="bottom" constant="-1" id="WKk-zM-oKw"/>
                             <constraint firstAttribute="centerX" secondItem="Zfz-Pd-DtQ" secondAttribute="centerX" id="XyE-kx-C3v"/>
