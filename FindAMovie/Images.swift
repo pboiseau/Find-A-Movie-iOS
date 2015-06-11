@@ -16,15 +16,17 @@ class Images: NSObject {
         
         let images = imagesDictionary["backdrops"] as! [[String:AnyObject]]
         
+        var id = 1
+        
         for image in images {
             
-            var id = image["id"] as! Int
-            var file_path = image["file_path"] as! String
-            var width = image["width"] as! Int
-            var height = image["height"] as! Int
+            var id = id
+            var file_path = image["file_path"] as? String
+            var width = image["width"] as? Int
+            var height = image["height"] as? Int
             
             list.append(Image(id: id, file_path: file_path, width: width, height: height))
-            
+            id++
         }
         
     }

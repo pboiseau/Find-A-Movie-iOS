@@ -11,12 +11,8 @@ import UIKit
 class DetailMovieViewController: UIViewController {
     
     
-    @IBOutlet var movieTitle: UILabel!
-    
     @IBOutlet var releaseDate: UILabel!
-    
     @IBOutlet var overview: UITextView!
-    
     @IBOutlet var poster: UIImageView!
     
     var movie: Movie?
@@ -24,21 +20,21 @@ class DetailMovieViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setBlur()
         self.overview.editable = false
-
+        
         if let movieDetail = self.movie {
             
             self.navigationItem.title = movieDetail.title
-            
-            self.movieTitle.text = movieDetail.title
-            self.releaseDate.text = "Sortie le \(movieDetail.releaseDate!)"
             self.overview.text = movieDetail.overview
+            self.releaseDate.text = "Sortie le \(movieDetail.releaseDate!)"
             
             // Using image cache
             if let poster = movieDetail.getImageURL() {
                 
                 self.poster.hnk_setImageFromURL(poster) {
                     (let image) in
+                    
                     self.poster.image = image
                 }
                 
@@ -47,7 +43,13 @@ class DetailMovieViewController: UIViewController {
             api.getMovieImages(movieDetail.id) {
                 (let images) in
                 
-                println(images?.list)
+                if let list = images?.list {
+                    
+                    for image in list {
+                        
+                    }
+                }
+                
             }
             
         }
@@ -63,4 +65,11 @@ class DetailMovieViewController: UIViewController {
         self.navigationController?.navigationBarHidden = false
     }
     
+    func setBlur() {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = self.poster.frame
+        self.poster.addSubview(blurView)
+        
+    }
 }
