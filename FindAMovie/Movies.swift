@@ -18,6 +18,7 @@ class Movies: NSObject {
     
     private var cursor: Int = 0
     private var iterator: IndexingGenerator<Array<Movie>>
+    private var current: Movie?
     
     init(moviesDictionary: [String: AnyObject], genres: String) {
         
@@ -44,6 +45,14 @@ class Movies: NSObject {
         self.iterator = list.generate()
     }
     
+    func getCurrent() -> Movie? {
+        if let movie = current {
+            return current
+        }
+        
+        return nil
+    }
+    
     /**
     Iterator to the next movie in the list
     
@@ -53,6 +62,7 @@ class Movies: NSObject {
         
         if let movie = self.iterator.next() {
             self.cursor++
+            self.current = movie
             return movie
         }
         

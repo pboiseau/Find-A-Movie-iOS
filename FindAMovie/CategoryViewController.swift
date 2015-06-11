@@ -88,7 +88,6 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             }
             
-            println(cat.currentList)
         }
         
     }

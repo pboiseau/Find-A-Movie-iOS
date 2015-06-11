@@ -92,6 +92,7 @@ println(arrayTest)
 var genres = [222,32,176,9,7]
 
 var test = genres.generate()
+
 test.next()
 test.next()
 test.next()

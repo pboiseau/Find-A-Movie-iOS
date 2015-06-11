@@ -185,8 +185,14 @@ class MovieViewController: UIViewController {
         println("we need to save the movie in the database")
     }
     
-    @IBAction func backToCategory(sender: UIButton?) {
-        self.dismissViewControllerAnimated(true, completion: {})
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showMovieDetail" {
+            
+            let detailMovieViewController = segue.destinationViewController as? DetailMovieViewController
+            detailMovieViewController!.movie = self.movies!.getCurrent()
+        }
+        
     }
     
     
