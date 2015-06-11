@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailMovieViewController: UIViewController {
+class DetailMovieViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     @IBOutlet var releaseDate: UILabel!
