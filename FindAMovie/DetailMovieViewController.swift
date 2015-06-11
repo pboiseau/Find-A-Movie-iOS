@@ -20,6 +20,7 @@ class DetailMovieViewController: UIViewController {
     @IBOutlet var poster: UIImageView!
     
     var movie: Movie?
+    let api = MovieDbService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,11 @@ class DetailMovieViewController: UIViewController {
                 
             }
             
+            api.getMovieImages(movieDetail.id) {
+                (let images) in
+                
+                println(images?.list)
+            }
             
         }
         

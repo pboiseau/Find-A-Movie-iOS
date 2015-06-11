@@ -53,6 +53,26 @@ class MovieDbService {
         }
     }
     
-    
+    func getMovieImages(id: Int, completion: (Images?) -> Void) {
+        
+        let request: String = "\(movieDbBaseUrl)movie/\(id)/images?api_key=\(apiKey)&"
+        let parameter: String = "language=\(self.language)"
+        
+        let networkOperation = NetworkOperation(url: "\(request)\(parameter)")
+        
+        networkOperation.executeRequest {
+            (let imagesJSON) in
+            
+            if let api_images = imagesJSON {
+                var images = Images(imagesDictionary: api_images)
+                
+                // callback
+                completion(images)
+            }
+            
+        }
+        
+
+    }
     
 }
