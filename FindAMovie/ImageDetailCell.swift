@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import Haneke
 
 class ImageDetailCell: UICollectionViewCell {
-
+    
+    @IBOutlet var imageDetail: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func setCell(image: Image){
+        
+        if let path = image.getImageURL() {
+            
+            self.imageDetail.hnk_setImageFromURL(path) {
+                (let fetchImage) in
+                
+                self.imageDetail.image = fetchImage
+            }
+        }
+        
+    }
     
 }

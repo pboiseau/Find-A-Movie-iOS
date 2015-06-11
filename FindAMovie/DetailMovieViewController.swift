@@ -11,12 +11,16 @@ import UIKit
 class DetailMovieViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
+    @IBOutlet var imageCollection: UICollectionView!
     @IBOutlet var releaseDate: UILabel!
     @IBOutlet var overview: UITextView!
     @IBOutlet var poster: UIImageView!
     
-    var movie: Movie?
     let api = MovieDbService()
+    let movieDetailCell: String = "detailCell"
+    
+    var movie: Movie?
+    var imageList: [Image] = [Image]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +48,8 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
                 (let images) in
                 
                 if let list = images?.list {
-                    
-                    for image in list {
-                        
-                    }
+                    self.imageList = list
+                    self.imageCollection.reloadData()
                 }
                 
             }
@@ -65,9 +67,30 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
         self.navigationController?.navigationBarHidden = false
     }
     
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (self.imageList.count > 4) ? 4 : self.imageList.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.movieDetailCell, forIndexPath: indexPath) as! ImageDetailCell
+        let row = indexPath.row
+    
+        cell.setCell(imageList[row])
+        
+        return cell
+    }
+    
     func setBlur() {
+        
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         let blurView = UIVisualEffectView(effect: blurEffect)
+        
         blurView.frame = self.poster.frame
         self.poster.addSubview(blurView)
         
