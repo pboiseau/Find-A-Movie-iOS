@@ -11,8 +11,8 @@ import UIKit
 class CategoryCell: UITableViewCell {
 
     @IBOutlet var categoryTitle: UILabel!
-
-    @IBOutlet var categoryStatus: UISwitch!
+    
+    @IBOutlet var status: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,8 +34,7 @@ class CategoryCell: UITableViewCell {
     func setCell(categoryTitle: String, categoryStatus: Bool) {
         
         self.categoryTitle.text = categoryTitle
-        self.categoryStatus.setOn(categoryStatus, animated: true)
-        self.categoryStatus.hidden = true
+        self.status.hidden = true
         
     }
     
@@ -45,8 +44,7 @@ class CategoryCell: UITableViewCell {
     :param: state: Bool
     */
     func switchCategoryState(state: Bool) {
-        self.categoryStatus.hidden = !state
-        self.categoryStatus.setOn(state, animated: true)
+        self.status.hidden = !state
     }
 
 }
