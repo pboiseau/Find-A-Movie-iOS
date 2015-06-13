@@ -1,6 +1,9 @@
 import Foundation
 import Alamofire
 
+/**
+*  Network Operation class to perform webservice request
+*/
 class NetworkOperation {
     
     let queryURL: String
@@ -49,9 +52,15 @@ class NetworkOperation {
         
     }
     
-    func getDataFromUrl(urL: NSURL, completion: ((data: NSData?) -> Void)) {
+    /**
+    Get data form URL
+    
+    :param: url NSURL
+    :param: completion (NSData) -> Void
+    */
+    func getDataFromUrl(url: NSURL, completion: ((data: NSData?) -> Void)) {
         
-        NSURLSession.sharedSession().dataTaskWithURL(urL) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) {
             (data, response, error) in
             
             if let error = error {

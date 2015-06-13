@@ -8,10 +8,18 @@
 
 import Foundation
 
+/**
+*  Images class
+*/
 class Images: NSObject {
     
     var list: [Image] = [Image]()
     
+    /**
+    Initialize a new images object
+    
+    :param: imagesDictionary [String: AnyObject]
+    */
     init(imagesDictionary: [String: AnyObject]) {
         
         let images = imagesDictionary["backdrops"] as! [[String:AnyObject]]

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+*  Movies class
+*/
 class Movies: NSObject {
     
     var list: [Movie] = [Movie]()
@@ -20,6 +23,12 @@ class Movies: NSObject {
     private var iterator: IndexingGenerator<Array<Movie>>
     private var current: Movie?
     
+    /**
+    Initialize a new movies object
+    
+    :param: moviesDictionary [String: AnyObject]
+    :param: genres           String
+    */
     init(moviesDictionary: [String: AnyObject], genres: String) {
         
         let movies = moviesDictionary["results"] as! [[String:AnyObject]]
@@ -45,6 +54,11 @@ class Movies: NSObject {
         self.iterator = list.generate()
     }
     
+    /**
+    Get current movie on the iterator
+    
+    :returns: Movie
+    */
     func getCurrent() -> Movie? {
         if let movie = current {
             return current

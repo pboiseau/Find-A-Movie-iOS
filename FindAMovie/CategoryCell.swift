@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+*  Custom Category Cell
+*/
 class CategoryCell: UITableViewCell {
 
     @IBOutlet var categoryTitle: UILabel!

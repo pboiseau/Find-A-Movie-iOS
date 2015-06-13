@@ -8,11 +8,20 @@
 
 import Foundation
 
+/**
+*  Category class
+*/
 class Category: NSObject {
     
     var id: Int
     var name: String
     
+    /**
+    Initialize a new category
+    
+    :param: id Int
+    :param: name String
+    */
     init(id: Int, name: String){
         self.id = id
         self.name = name

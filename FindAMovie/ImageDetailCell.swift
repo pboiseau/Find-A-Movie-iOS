@@ -9,6 +9,9 @@
 import UIKit
 import Haneke
 
+/**
+*  Custom Image Detail Cell
+*/
 class ImageDetailCell: UICollectionViewCell {
     
     @IBOutlet var imageDetail: UIImageView!
@@ -17,6 +20,11 @@ class ImageDetailCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    /**
+    Set the content of a specific cell
+    
+    :param: image Image
+    */
     func setCell(image: Image){
         
         if let path = image.getImageURL() {

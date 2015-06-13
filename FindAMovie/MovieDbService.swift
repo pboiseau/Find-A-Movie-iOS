@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+*  TMDB API Service
+*  api.themoviedb.org/3/
+*/
 class MovieDbService {
     
     let apiKey = "061aa72cb2da19956a42cf429bbe0e0d"
@@ -15,6 +19,11 @@ class MovieDbService {
     let movieDbBaseUrl = "http://api.themoviedb.org/3/"
     let movieDbImageUrl = "http://image.tmdb.org/t/p/"
     
+    /**
+    Retrieve categories from TMDB API
+    
+    :param: completion (Categories) -> Void
+    */
     func getCategories(completion: (Categories?) -> Void) {
         
         let networkOperation = NetworkOperation(url: "\(movieDbBaseUrl)genre/movie/list?api_key=\(apiKey)&language=\(self.language)")
@@ -33,6 +42,13 @@ class MovieDbService {
         
     }
     
+    /**
+    Retrieve movies by categories
+    
+    :param: genres String list of genres separate by comma
+    :param: page Int
+    :param: completion (Movies) -> Void
+    */
     func getMovies(genres: String, page: Int = 1, completion: (Movies?) -> Void) {
         
         let request: String = "\(movieDbBaseUrl)discover/movie?api_key=\(apiKey)&"
@@ -53,6 +69,12 @@ class MovieDbService {
         }
     }
     
+    /**
+    Retrieve images associated with a movie
+    
+    :param: id
+    :param: completion (Images) -> Void
+    */
     func getMovieImages(id: Int, completion: (Images?) -> Void) {
         
         let request: String = "\(movieDbBaseUrl)movie/\(id)/images?api_key=\(apiKey)&"

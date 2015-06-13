@@ -8,11 +8,19 @@
 
 import Foundation
 
+/**
+*  Categories class
+*/
 class Categories: NSObject {
     
     var list: [Category] = [Category]()
     var currentList: [Int] = [Int]()
+  
+    /**
+    Initialize a new categories object
     
+    :param: categoriesDictionary [String: AnyObject]
+    */
     init(categoriesDictionary: [String: AnyObject]) {
         
         self.list = [Category]()
@@ -30,6 +38,12 @@ class Categories: NSObject {
         
     }
     
+    /**
+    Return a list of categories in string separated by commo
+    
+    :param: type String
+    :returns: String
+    */
     func listToString(#type: String) -> String {
         
         var genres: [String] = []

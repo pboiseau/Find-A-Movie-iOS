@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/**
+*  Movie class
+*/
 class Movie {
     
     var id: Int
@@ -19,6 +22,17 @@ class Movie {
     var releaseDate: String?
     var posterPath: String?
     
+    /**
+    Initialize a new movie
+    
+    :param: id            Int
+    :param: title         String
+    :param: backdropPath  String (optional)
+    :param: overview      String (optional)
+    :param: originalTitle String
+    :param: releaseDate   String (optional)
+    :param: posterPath    String (optional)
+    */
     init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String?, posterPath: String?){
         
         self.id = id
@@ -41,6 +55,12 @@ class Movie {
         
     }
     
+    /**
+    Retrieve image using poster path
+    
+    :param: size       String
+    :param: completion (UIImage) -> Void
+    */
     func downloadImage(size: String = "w500", completion: (UIImage?) -> Void){
         
         if let poster = self.posterPath {
@@ -65,6 +85,11 @@ class Movie {
         }
     }
     
+    /**
+    Return image URL using poster path
+    
+    :returns: NSURL (optional)
+    */
     func getImageURL() -> NSURL? {
         
         if let poster = self.posterPath {
