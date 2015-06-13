@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+*  Main view controller
+*/
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -22,9 +25,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-    }
-
 }
 

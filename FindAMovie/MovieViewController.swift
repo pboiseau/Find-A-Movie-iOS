@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 import Haneke
 
+/**
+*  Movie View Controller
+*/
 class MovieViewController: UIViewController {
     
     @IBOutlet var movieTitle: UILabel!
@@ -25,6 +28,9 @@ class MovieViewController: UIViewController {
     
     let api = MovieDbService()
     
+    /**
+    Retrieve movies from Movie Db Service after loading the view filter by categories
+    */
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -53,11 +59,18 @@ class MovieViewController: UIViewController {
         
     }
     
+    /**
+    Hide the navigation bar
+    
+    :param: animated Bool
+    */
     override func viewWillAppear(animated: Bool) {
+        
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
+        
     }
     
     /**
@@ -172,6 +185,12 @@ class MovieViewController: UIViewController {
         
     }
     
+    /**
+    Print alert info for user when no movies was found on the MovieDBService
+    
+    :param: title   String
+    :param: message String
+    */
     func setAlert(title: String, message: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
@@ -181,10 +200,21 @@ class MovieViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    /**
+    Catch like button press and store movie on the database
+    
+    :param: sender UIButton
+    */
     @IBAction func likeMovie(sender: UIButton) {
         println("we need to save the movie in the database")
     }
     
+    /**
+    Send Movie Object to the Detail View Controller
+    
+    :param: segue  UIStoryboardSegue
+    :param: sender AnyObject
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "showMovieDetail" {

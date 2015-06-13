@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+*  Detail Movie View Controller
+*/
 class DetailMovieViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
@@ -22,8 +25,13 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
     var movie: Movie?
     var imageList: [Image] = [Image]()
     
+    /**
+    Set movie info on the view and retrieve images associated with the current movie
+    */
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         self.setBlur()
         self.overview.editable = false
         
@@ -63,15 +71,34 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+    Show navigation bar
+    
+    :param: animated Bool
+    */
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
     
+    /**
+    Set the default number of sections in the collection view
     
+    :param: collectionView UICollectionView
+    
+    :returns: Int
+    */
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
+    /**
+    Return the number of elements in the collection view
+    
+    :param: collectionView UICollectionView
+    :param: section Int
+    
+    :returns: Int (max 4)
+    */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (self.imageList.count > 4) ? 4 : self.imageList.count
     }
@@ -86,6 +113,9 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
         return cell
     }
     
+    /**
+    Set blur effect on the background poster
+    */
     func setBlur() {
         
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)

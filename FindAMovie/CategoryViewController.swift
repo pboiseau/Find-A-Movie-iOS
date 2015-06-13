@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+*  Category View Controller
+*/
 class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var categoryTableView: UITableView!
@@ -19,10 +22,13 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     var categoriesList: [Category] = [Category]()
     var categories: Categories?
     
+    /**
+    Retrieve categories from Movie Db Service after loading the view
+    */
     override func viewDidLoad() {
         
         super.viewDidLoad()
-                
+        
         MovieDbService().getCategories {
             (let categoriesObject) in
             
@@ -45,25 +51,53 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.navigationBarHidden = false
     }
     
+    /**
+    Set the default number of sections in the table view
+    
+    :param: tableView UITableView
+    
+    :returns: Int
+    */
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    /**
+    Return the number of elements in the table view
+    
+    :param: tableView UITableView
+    :param: section Int
+    
+    :returns: Int
+    */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoriesList.count
     }
     
+    /**
+    Generate and set the content of each cell in the table view
     
+    :param: tableView UITableView
+    :param: indexPath NSIndexPath
+    
+    :returns: UITableViewCell
+    */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(categoryCell, forIndexPath: indexPath) as! CategoryCell
         let row = indexPath.row
         
         cell.setCell(categoriesList[row].name, categoryStatus: false)
-                
+        
         return cell
     }
     
+    /**
+    Set category when user touch a cell
+    
+    :param: tableView UITableView
+    :param: indexPath NSIndexPath
+    */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -92,17 +126,19 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
+    /**
+    Send categories to the Movie View Controller
+    
+    :param: segue  UIStoryboardSegue
+    :param: sender AnyObject
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        
         if segue.identifier == "displayMovie" {
             let movieViewController = segue.destinationViewController as! MovieViewController
             movieViewController.categories = self.categories
         }
         
-    }
-    
-    @IBAction func backHome(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: {})
     }
     
 }
