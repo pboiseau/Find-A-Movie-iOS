@@ -12,7 +12,7 @@ import UIKit
 *  Custom Category Cell
 */
 class CategoryCell: UITableViewCell {
-
+    
     @IBOutlet var categoryTitle: UILabel!
     
     @IBOutlet var status: UIImageView!
@@ -20,6 +20,7 @@ class CategoryCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        status.hidden = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -27,6 +28,7 @@ class CategoryCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     
     /**
     Initialize custom cell
@@ -37,7 +39,7 @@ class CategoryCell: UITableViewCell {
     func setCell(categoryTitle: String, categoryStatus: Bool) {
         
         self.categoryTitle.text = categoryTitle
-        self.status.hidden = true
+        self.status.hidden = !categoryStatus
         
     }
     

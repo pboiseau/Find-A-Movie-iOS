@@ -22,6 +22,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     var categoriesList: [Category] = [Category]()
     var categories: Categories?
     
+    var selectedRow: [Bool] = [Bool]()
+    
     /**
     Retrieve categories from Movie Db Service after loading the view
     */
@@ -36,6 +38,11 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
                 
                 self.categories = categories
                 self.categoriesList = categories.list
+                
+                for(var i = 0; i < categories.list.count; i++) {
+                    self.selectedRow.append(false)
+                }
+                
                 self.categoryTableView.reloadData()
             }
             
@@ -83,14 +90,20 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     :returns: UITableViewCell
     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
         
         let cell = tableView.dequeueReusableCellWithIdentifier(categoryCell, forIndexPath: indexPath) as! CategoryCell
         let row = indexPath.row
         
-        cell.setCell(categoriesList[row].name, categoryStatus: false)
+        if(selectedRow.count == categoriesList.count && selectedRow[row]){
+            cell.setCell(categoriesList[row].name, categoryStatus: true)
+        } else {
+            cell.setCell(categoriesList[row].name, categoryStatus: false)
+        }
         
         return cell
     }
+    
     
     /**
     Set category when user touch a cell
@@ -111,13 +124,13 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
             
             if !contains(cat.currentList, categoriesList[row].id) {
                 cat.currentList.append(categoriesList[row].id)
-                
+                selectedRow[row] = true
                 cell.switchCategoryState(true)
                 
             } else {
                 if let index = find(cat.currentList, categoriesList[row].id) {
                     cat.currentList.removeAtIndex(index)
-                    
+                    selectedRow[row] = false
                     cell.switchCategoryState(false)
                 }
             }
