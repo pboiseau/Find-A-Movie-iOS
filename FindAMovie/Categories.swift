@@ -19,7 +19,7 @@ class Categories: NSObject {
     /**
     Initialize a new categories object
     
-    :param: categoriesDictionary [String: AnyObject]
+    - parameter categoriesDictionary: [String: AnyObject]
     */
     init(categoriesDictionary: [String: AnyObject]) {
         
@@ -29,8 +29,8 @@ class Categories: NSObject {
         
         for category in categories {
             
-            var id = category["id"] as! Int
-            var name = category["name"] as! String
+            let id = category["id"] as! Int
+            let name = category["name"] as! String
             
             list.append(Category(id: id, name: name))
             
@@ -41,19 +41,19 @@ class Categories: NSObject {
     /**
     Return a list of categories in string separated by commo
     
-    :param: type String
-    :returns: String
+    - parameter type: String
+    - returns: String
     */
-    func listToString(#type: String) -> String {
+    func listToString(type type: String) -> String {
         
         var genres: [String] = []
-        var separator = (type == "AND") ? "," : "|"
+        let separator = (type == "AND") ? "," : "|"
         
         for item in currentList {
             genres.append(String(item))
         }
         
-        return join(separator, genres)
+        return genres.joinWithSeparator(separator)
     }
     
 }

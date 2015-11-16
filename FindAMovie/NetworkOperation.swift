@@ -2,8 +2,8 @@ import Foundation
 import Alamofire
 
 /**
-*  Network Operation class to perform webservice request
-*/
+ *  Network Operation class to perform webservice request
+ */
 class NetworkOperation {
     
     let queryURL: String
@@ -11,41 +11,39 @@ class NetworkOperation {
     typealias JSONDictionaryCompletion = ([String: AnyObject]? -> Void)
     
     /**
-    Initialize NetworkOperation
-    
-    :param: url URL of the web service
-    */
+     Initialize NetworkOperation
+     
+     - parameter url: URL of the web service
+     */
     init(url: String) {
         self.queryURL = url
     }
     
     /**
-    Execute a GET request to featch data from the web
-    
-    :param: completion Callback to retour JSON Dictionnary
-    */
+     Execute a GET request to featch data from the web
+     
+     - parameter completion: Callback to retour JSON Dictionnary
+     */
     func executeRequest(completion: JSONDictionaryCompletion) {
         
         Alamofire
             .request(.GET, self.queryURL)
-            .responseJSON{
-                (request, response, data, error) in
+            .responseJSON {
+                response in
                 
-                if let httpResponse = response {
+                if let httpResponse = response.response {
                     
                     switch httpResponse.statusCode {
                     case 200:
-                        
-                        let jsonDictionary = data as? [String: AnyObject]
+                        let jsonDictionary = response.result.value as? [String: AnyObject]
                         
                         completion(jsonDictionary)
-                        
                     default:
-                        println("GET request not successful. HTTP status code: \(httpResponse.statusCode)")
+                        print("GET request not successful. HTTP status code: \(httpResponse.statusCode)")
                     }
                     
                 } else {
-                    println("Error: Not a valid HTTP response")
+                    print("Error: Not a valid HTTP response")
                     completion(nil)
                 }
         }
@@ -53,18 +51,18 @@ class NetworkOperation {
     }
     
     /**
-    Get data form URL
-    
-    :param: url NSURL
-    :param: completion (NSData) -> Void
-    */
+     Get data form URL
+     
+     - parameter url: NSURL
+     - parameter completion: (NSData) -> Void
+     */
     func getDataFromUrl(url: NSURL, completion: ((data: NSData?) -> Void)) {
         
         NSURLSession.sharedSession().dataTaskWithURL(url) {
             (data, response, error) in
             
             if let error = error {
-                println(error)
+                print(error)
             }
             
             completion(data: data)

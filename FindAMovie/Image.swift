@@ -21,10 +21,10 @@ class Image {
     /**
     Initialize a new image
     
-    :param: id        Int
-    :param: file_path String (optional)
-    :param: width     Int (optional)
-    :param: height    Int (optional)
+    - parameter id:        Int
+    - parameter file_path: String (optional)
+    - parameter width:     Int (optional)
+    - parameter height:    Int (optional)
     */
     init(id: Int, file_path: String?, width: Int?, height: Int?){
         self.id = id
@@ -46,7 +46,7 @@ class Image {
     /**
     Return image URL using file_path
     
-    :returns: NSURL (optional)
+    - returns: NSURL (optional)
     */
     func getImageURL() -> NSURL? {
         

@@ -18,20 +18,20 @@ class Images: NSObject {
     /**
     Initialize a new images object
     
-    :param: imagesDictionary [String: AnyObject]
+    - parameter imagesDictionary: [String: AnyObject]
     */
     init(imagesDictionary: [String: AnyObject]) {
         
         let images = imagesDictionary["backdrops"] as! [[String:AnyObject]]
         
-        var id = 1
+        let id = 1
         
         for image in images {
             
             var id = id
-            var file_path = image["file_path"] as? String
-            var width = image["width"] as? Int
-            var height = image["height"] as? Int
+            let file_path = image["file_path"] as? String
+            let width = image["width"] as? Int
+            let height = image["height"] as? Int
             
             list.append(Image(id: id, file_path: file_path, width: width, height: height))
             id++

@@ -16,13 +16,13 @@ class MovieDbService {
     
     let apiKey = "061aa72cb2da19956a42cf429bbe0e0d"
     let language = "fr"
-    let movieDbBaseUrl = "http://api.themoviedb.org/3/"
-    let movieDbImageUrl = "http://image.tmdb.org/t/p/"
+    let movieDbBaseUrl = "https://api.themoviedb.org/3/"
+    let movieDbImageUrl = "https://image.tmdb.org/t/p/"
     
     /**
     Retrieve categories from TMDB API
     
-    :param: completion (Categories) -> Void
+    - parameter completion: (Categories) -> Void
     */
     func getCategories(completion: (Categories?) -> Void) {
         
@@ -32,7 +32,7 @@ class MovieDbService {
             (let categoriesJSON) in
             
             if let categories = categoriesJSON {
-                var categories = Categories(categoriesDictionary: categories)
+                let categories = Categories(categoriesDictionary: categories)
                 
                 // callback
                 completion(categories)
@@ -45,9 +45,9 @@ class MovieDbService {
     /**
     Retrieve movies by categories
     
-    :param: genres String list of genres separate by comma
-    :param: page Int
-    :param: completion (Movies) -> Void
+    - parameter genres: String list of genres separate by comma
+    - parameter page: Int
+    - parameter completion: (Movies) -> Void
     */
     func getMovies(genres: String, page: Int = 1, completion: (Movies?) -> Void) {
         
@@ -60,7 +60,7 @@ class MovieDbService {
             (let moviesJSON) in
             
             if let api_movies = moviesJSON {
-                var movies = Movies(moviesDictionary: api_movies, genres: genres)
+                let movies = Movies(moviesDictionary: api_movies, genres: genres)
                 
                 // callback
                 completion(movies)
@@ -72,8 +72,8 @@ class MovieDbService {
     /**
     Retrieve images associated with a movie
     
-    :param: id
-    :param: completion (Images) -> Void
+    - parameter id:
+    - parameter completion: (Images) -> Void
     */
     func getMovieImages(id: Int, completion: (Images?) -> Void) {
         
@@ -85,7 +85,7 @@ class MovieDbService {
             (let imagesJSON) in
                         
             if let api_images = imagesJSON {
-                var images = Images(imagesDictionary: api_images)
+                let images = Images(imagesDictionary: api_images)
                 
                 // callback
                 completion(images)

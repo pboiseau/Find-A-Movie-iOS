@@ -33,8 +33,8 @@ class CategoryCell: UITableViewCell {
     /**
     Initialize custom cell
     
-    :param: categoryTitle: String
-    :param: categoryStatus: Bool
+    - parameter categoryTitle:: String
+    - parameter categoryStatus:: Bool
     */
     func setCell(categoryTitle: String, categoryStatus: Bool) {
         
@@ -46,7 +46,7 @@ class CategoryCell: UITableViewCell {
     /**
     Switch category status UISwitch
     
-    :param: state: Bool
+    - parameter state:: Bool
     */
     func switchCategoryState(state: Bool) {
         self.status.hidden = !state

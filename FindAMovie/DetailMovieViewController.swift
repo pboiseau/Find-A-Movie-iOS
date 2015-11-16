@@ -74,7 +74,7 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
     /**
     Show navigation bar
     
-    :param: animated Bool
+    - parameter animated: Bool
     */
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
@@ -83,9 +83,9 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
     /**
     Set the default number of sections in the collection view
     
-    :param: collectionView UICollectionView
+    - parameter collectionView: UICollectionView
     
-    :returns: Int
+    - returns: Int
     */
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -94,10 +94,10 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
     /**
     Return the number of elements in the collection view
     
-    :param: collectionView UICollectionView
-    :param: section Int
+    - parameter collectionView: UICollectionView
+    - parameter section: Int
     
-    :returns: Int (max 4)
+    - returns: Int (max 4)
     */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (self.imageList.count > 4) ? 4 : self.imageList.count

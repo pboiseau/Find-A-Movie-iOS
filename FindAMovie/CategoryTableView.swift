@@ -17,8 +17,8 @@ class CategoryTableView: NSObject, UITableViewDataSource, UITableViewDelegate {
     /**
     Initialize a new category table view
     
-    :param: categories Category
-    :param: cellIdentifier String
+    - parameter categories: Category
+    - parameter cellIdentifier: String
     */
     init(categories: [Category], cellIdentifier: String) {
         self.categories = categories
@@ -28,9 +28,9 @@ class CategoryTableView: NSObject, UITableViewDataSource, UITableViewDelegate {
     /**
     Set the default number of sections in the table view
     
-    :param: tableView UITableView
+    - parameter tableView: UITableView
     
-    :returns: Int
+    - returns: Int
     */
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -39,10 +39,10 @@ class CategoryTableView: NSObject, UITableViewDataSource, UITableViewDelegate {
     /**
     Return the number of elements in the table view
     
-    :param: tableView UITableView
-    :param: section Int
+    - parameter tableView: UITableView
+    - parameter section: Int
     
-    :returns: Int
+    - returns: Int
     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
@@ -51,14 +51,14 @@ class CategoryTableView: NSObject, UITableViewDataSource, UITableViewDelegate {
     /**
     Generate and set the content of each cell in the table view
     
-    :param: tableView UITableView
-    :param: indexPath NSIndexPath
+    - parameter tableView: UITableView
+    - parameter indexPath: NSIndexPath
     
-    :returns: UITableViewCell
+    - returns: UITableViewCell
     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) 
         let row = indexPath.row
         cell.textLabel?.text = categories[row].name
         

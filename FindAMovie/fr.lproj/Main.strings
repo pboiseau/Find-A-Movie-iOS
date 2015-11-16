@@ -1,0 +1,24 @@
+
+/* Class = "UINavigationItem"; title = "Mes films"; ObjectID = "2Vc-Sw-vzo"; */
+"2Vc-Sw-vzo.title" = "Mes films";
+
+/* Class = "UIButton"; normalTitle = "VALIDER"; ObjectID = "ChQ-js-h9D"; */
+"ChQ-js-h9D.normalTitle" = "VALIDER";
+
+/* Class = "UIButton"; normalTitle = "MES FILMS"; ObjectID = "Ke1-x5-rNb"; */
+"Ke1-x5-rNb.normalTitle" = "MES FILMS";
+
+/* Class = "UILabel"; text = "Date de sortie"; ObjectID = "aSj-bB-Lhl"; */
+"aSj-bB-Lhl.text" = "Date de sortie";
+
+/* Class = "UILabel"; text = "QUEL GENRE DE FILM SOUHAITEZ VOUS REGARDER ?"; ObjectID = "biL-0j-upW"; */
+"biL-0j-upW.text" = "QUEL GENRE DE FILM SOUHAITEZ VOUS REGARDER ?";
+
+/* Class = "UINavigationItem"; title = "Genres"; ObjectID = "c7q-gl-Tkh"; */
+"c7q-gl-Tkh.title" = "Genres";
+
+/* Class = "UILabel"; text = "This product uses the TMDb API but is not endorsed or certified by TMDb"; ObjectID = "ci7-wq-MIi"; */
+"ci7-wq-MIi.text" = "This product uses the TMDb API but is not endorsed or certified by TMDb";
+
+/* Class = "UIButton"; normalTitle = "TROUVER UN FILM"; ObjectID = "iT7-Eq-4Rz"; */
+"iT7-Eq-4Rz.normalTitle" = "TROUVER UN FILM";
