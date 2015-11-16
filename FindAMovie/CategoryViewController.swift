@@ -36,8 +36,6 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
             
             if let categories = categoriesObject {
                 
-                print(categories)
-                
                 self.categories = categories
                 self.categoriesList = categories.list
                 
