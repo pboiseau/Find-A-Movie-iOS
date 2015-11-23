@@ -17,7 +17,6 @@ struct MovieDbApi {
 }
 
 import XCPlayground
-XCPSetExecutionShouldContinueIndefinitely()
 
 let genre = NSURL(string: "genre/movie/list?api_key=\(MovieDbApi().apiKey)", relativeToURL: MovieDbApi().baseUrl())!
 
@@ -25,16 +24,16 @@ let request = NSMutableURLRequest(URL: genre)
 request.addValue("application/json", forHTTPHeaderField: "Accept")
 
 let session = NSURLSession.sharedSession()
-let task = session.dataTaskWithRequest(request) { (data: NSData!, response: NSURLResponse!, error: NSError!) in
+let task = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
     
     if error != nil {
         // Handle error...
         return
     }
     
-    println(error)
-    println(response)
-    println(NSString(data: data, encoding: NSUTF8StringEncoding))
+    print(error)
+    print(response)
+    print(NSString(data: data!, encoding: NSUTF8StringEncoding))
 }
 
 task.resume()
@@ -81,13 +80,13 @@ numbers.map(tripleFunction)
 
 var arrayTest = [12,25,33,40,25]
 
-if !contains(arrayTest, 1222){
-    println("yes")
+if !arrayTest.contains(1222){
+    print("yes")
 }
 
-find(arrayTest, 33)
+arrayTest.indexOf(33)
 
-println(arrayTest)
+print(arrayTest)
 
 var genres = [222,32,176,9,7]
 
@@ -104,13 +103,13 @@ for genre in genres {
     genresString.append(String(genre))
 }
 
-join(",", genresString)
+genresString.joinWithSeparator(",")
 
 func testparam(name: String = "Paul") -> String {
     return name
 }
 
-testparam(name: "adrien")
+testparam("adrien")
 
 var current_page = 3
 var max_page = 7

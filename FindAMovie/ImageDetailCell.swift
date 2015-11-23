@@ -23,7 +23,7 @@ class ImageDetailCell: UICollectionViewCell {
     /**
     Set the content of a specific cell
     
-    :param: image Image
+    - parameter image: Image
     */
     func setCell(image: Image){
         

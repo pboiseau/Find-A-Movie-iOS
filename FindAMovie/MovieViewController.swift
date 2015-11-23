@@ -35,10 +35,11 @@ class MovieViewController: UIViewController {
         
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = true
         self.movieDescription.editable = false
         
         // left swipe
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         
         leftSwipe.direction = .Left
         
@@ -62,7 +63,7 @@ class MovieViewController: UIViewController {
     /**
     Hide the navigation bar
     
-    :param: animated Bool
+    - parameter animated: Bool
     */
     override func viewWillAppear(animated: Bool) {
         
@@ -87,7 +88,7 @@ class MovieViewController: UIViewController {
                     
                     self.movies = moviesObject
                     self.nextMovie(nil)
-                    println("fetching next movies")
+                    print("fetching next movies")
                     
                 } else {
                     self.setAlert("Films introuvable", message: "Aucun film ne correspond à votre requête. Merci de la modifier et de relancer une recherche")
@@ -102,18 +103,17 @@ class MovieViewController: UIViewController {
     /**
     Get the next page of the API results
     
-    :returns: Int
+    - returns: Int
     */
     func getNextPage() -> Int {
         let page = (++current_page <= movies!.total_pages) ? current_page : 1
-        println(page)
         return page
     }
     
     /**
     Handler to detect swipe and execute action
     
-    :param: sender
+    - parameter sender:
     */
     func handleSwipes(sender: UISwipeGestureRecognizer) {
         
@@ -131,7 +131,7 @@ class MovieViewController: UIViewController {
     /**
     Fetch the next movies from the movies object
     
-    :param: sender
+    - parameter sender:
     */
     @IBAction func nextMovie(sender: UIButton?) {
         
@@ -148,7 +148,7 @@ class MovieViewController: UIViewController {
                 
                 self.moviePoster.hnk_setImageFromURL(poster) {
                     (let image) in
-                    self.moviePoster.slideInFromRight(duration: 0.3, completionDelegate: nil) {
+                    self.moviePoster.slideInFromRight(0.3, completionDelegate: nil) {
                         self.moviePoster.image = image
                     }
                 }
@@ -178,7 +178,7 @@ class MovieViewController: UIViewController {
             prevMovie.downloadImage {
                 (let image) in
                 
-                self.moviePoster.slideInFromLeft(duration: 0.3, completionDelegate: nil)
+                self.moviePoster.slideInFromLeft(0.3, completionDelegate: nil)
                 self.moviePoster.image = image
             }
         }
@@ -188,8 +188,8 @@ class MovieViewController: UIViewController {
     /**
     Print alert info for user when no movies was found on the MovieDBService
     
-    :param: title   String
-    :param: message String
+    - parameter title:   String
+    - parameter message: String
     */
     func setAlert(title: String, message: String) {
         
@@ -203,17 +203,17 @@ class MovieViewController: UIViewController {
     /**
     Catch like button press and store movie on the database
     
-    :param: sender UIButton
+    - parameter sender: UIButton
     */
     @IBAction func likeMovie(sender: UIButton) {
-        println("we need to save the movie in the database")
+        print("we need to save the movie in the database")
     }
     
     /**
     Send Movie Object to the Detail View Controller
     
-    :param: segue  UIStoryboardSegue
-    :param: sender AnyObject
+    - parameter segue:  UIStoryboardSegue
+    - parameter sender: AnyObject
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

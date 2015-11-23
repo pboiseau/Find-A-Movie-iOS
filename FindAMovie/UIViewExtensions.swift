@@ -14,8 +14,8 @@ extension UIView {
     /**
     View transition for slide left event
     
-    :param: duration NSTimeInterval
-    :param: completionDelegate AnyObject
+    - parameter duration: NSTimeInterval
+    - parameter completionDelegate: AnyObject
     */
     func slideInFromLeft(duration: NSTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
         
@@ -42,8 +42,8 @@ extension UIView {
     /**
     View transition for slide right event
     
-    :param: duration NSTimeInterval
-    :param: completionDelegate AnyObject
+    - parameter duration: NSTimeInterval
+    - parameter completionDelegate: AnyObject
     */
     func slideInFromRight(duration: NSTimeInterval = 1.0, completionDelegate: AnyObject? = nil, completion: () -> Void) {
         

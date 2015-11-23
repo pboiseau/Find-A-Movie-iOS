@@ -25,13 +25,13 @@ class Movie {
     /**
     Initialize a new movie
     
-    :param: id            Int
-    :param: title         String
-    :param: backdropPath  String (optional)
-    :param: overview      String (optional)
-    :param: originalTitle String
-    :param: releaseDate   String (optional)
-    :param: posterPath    String (optional)
+    - parameter id:            Int
+    - parameter title:         String
+    - parameter backdropPath:  String (optional)
+    - parameter overview:      String (optional)
+    - parameter originalTitle: String
+    - parameter releaseDate:   String (optional)
+    - parameter posterPath:    String (optional)
     */
     init(id: Int, title: String, backdropPath: String?, overview: String?, originalTitle: String, releaseDate: String?, posterPath: String?){
         
@@ -42,7 +42,7 @@ class Movie {
             self.backdropPath = backdrop
         }
         
-        if let over = overview {
+        if overview != nil {
             self.overview = overview!
         }
         
@@ -58,8 +58,8 @@ class Movie {
     /**
     Retrieve image using poster path
     
-    :param: size       String
-    :param: completion (UIImage) -> Void
+    - parameter size:       String
+    - parameter completion: (UIImage) -> Void
     */
     func downloadImage(size: String = "w500", completion: (UIImage?) -> Void){
         
@@ -73,14 +73,14 @@ class Movie {
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     
-                    var image = UIImage(data: data!)
+                    let image = UIImage(data: data!)
                     completion(image)
                 }
                 
             }
             
         } else {
-            println("This image doesn't have poster")
+            print("This image doesn't have poster")
             
         }
     }
@@ -88,7 +88,7 @@ class Movie {
     /**
     Return image URL using poster path
     
-    :returns: NSURL (optional)
+    - returns: NSURL (optional)
     */
     func getImageURL() -> NSURL? {
         

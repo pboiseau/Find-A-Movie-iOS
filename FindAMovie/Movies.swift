@@ -26,8 +26,8 @@ class Movies: NSObject {
     /**
     Initialize a new movies object
     
-    :param: moviesDictionary [String: AnyObject]
-    :param: genres           String
+    - parameter moviesDictionary: [String: AnyObject]
+    - parameter genres:           String
     */
     init(moviesDictionary: [String: AnyObject], genres: String) {
         
@@ -39,13 +39,13 @@ class Movies: NSObject {
         
         for movie in movies {
             
-            var id = movie["id"] as! Int
-            var title = movie["title"] as! String
-            var backdropPath = movie["backdrop_path"] as? String
-            var overview = movie["overview"] as? String
-            var originalTitle = movie["original_title"] as! String
-            var releaseDate = movie["release_date"] as? String
-            var posterPath = movie["poster_path"] as? String
+            let id = movie["id"] as! Int
+            let title = movie["title"] as! String
+            let backdropPath = movie["backdrop_path"] as? String
+            let overview = movie["overview"] as? String
+            let originalTitle = movie["original_title"] as! String
+            let releaseDate = movie["release_date"] as? String
+            let posterPath = movie["poster_path"] as? String
             
             list.append(Movie(id: id, title: title, backdropPath: backdropPath, overview: overview, originalTitle: originalTitle, releaseDate: releaseDate, posterPath: posterPath))
             
@@ -57,10 +57,10 @@ class Movies: NSObject {
     /**
     Get current movie on the iterator
     
-    :returns: Movie
+    - returns: Movie
     */
     func getCurrent() -> Movie? {
-        if let movie = current {
+        if (current != nil) {
             return current
         }
         
@@ -70,7 +70,7 @@ class Movies: NSObject {
     /**
     Iterator to the next movie in the list
     
-    :returns: Movie
+    - returns: Movie
     */
     func next() -> Movie? {
         
@@ -86,7 +86,7 @@ class Movies: NSObject {
     /**
     Return the previous movie from the list
     
-    :returns: Movie
+    - returns: Movie
     */
     func prev() -> Movie? {
         
@@ -100,7 +100,7 @@ class Movies: NSObject {
             self.cursor--
         }
         
-        var movie = self.list[self.cursor]
+        let movie = self.list[self.cursor]
         
         return movie
     }

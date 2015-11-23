@@ -61,9 +61,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     /**
     Set the default number of sections in the table view
     
-    :param: tableView UITableView
+    - parameter tableView: UITableView
     
-    :returns: Int
+    - returns: Int
     */
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -72,10 +72,10 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     /**
     Return the number of elements in the table view
     
-    :param: tableView UITableView
-    :param: section Int
+    - parameter tableView: UITableView
+    - parameter section: Int
     
-    :returns: Int
+    - returns: Int
     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoriesList.count
@@ -84,10 +84,10 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     /**
     Generate and set the content of each cell in the table view
     
-    :param: tableView UITableView
-    :param: indexPath NSIndexPath
+    - parameter tableView: UITableView
+    - parameter indexPath: NSIndexPath
     
-    :returns: UITableViewCell
+    - returns: UITableViewCell
     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
@@ -108,8 +108,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     /**
     Set category when user touch a cell
     
-    :param: tableView UITableView
-    :param: indexPath NSIndexPath
+    - parameter tableView: UITableView
+    - parameter indexPath: NSIndexPath
     */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -122,13 +122,13 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         // if categories fetch from api
         if let cat = categories {
             
-            if !contains(cat.currentList, categoriesList[row].id) {
+            if !cat.currentList.contains(categoriesList[row].id) {
                 cat.currentList.append(categoriesList[row].id)
                 selectedRow[row] = true
                 cell.switchCategoryState(true)
                 
             } else {
-                if let index = find(cat.currentList, categoriesList[row].id) {
+                if let index = cat.currentList.indexOf(categoriesList[row].id) {
                     cat.currentList.removeAtIndex(index)
                     selectedRow[row] = false
                     cell.switchCategoryState(false)
@@ -142,8 +142,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     /**
     Send categories to the Movie View Controller
     
-    :param: segue  UIStoryboardSegue
-    :param: sender AnyObject
+    - parameter segue:  UIStoryboardSegue
+    - parameter sender: AnyObject
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

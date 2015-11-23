@@ -19,8 +19,8 @@ class Category: NSObject {
     /**
     Initialize a new category
     
-    :param: id Int
-    :param: name String
+    - parameter id: Int
+    - parameter name: String
     */
     init(id: Int, name: String){
         self.id = id
