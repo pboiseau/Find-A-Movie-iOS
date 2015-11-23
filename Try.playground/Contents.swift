@@ -17,7 +17,6 @@ struct MovieDbApi {
 }
 
 import XCPlayground
-XCPSetExecutionShouldContinueIndefinitely()
 
 let genre = NSURL(string: "genre/movie/list?api_key=\(MovieDbApi().apiKey)", relativeToURL: MovieDbApi().baseUrl())!
 
@@ -34,7 +33,7 @@ let task = session.dataTaskWithRequest(request) { (data: NSData?, response: NSUR
     
     print(error)
     print(response)
-    print(NSString(data: data, encoding: NSUTF8StringEncoding))
+    print(NSString(data: data!, encoding: NSUTF8StringEncoding))
 }
 
 task.resume()
