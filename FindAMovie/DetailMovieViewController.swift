@@ -14,13 +14,12 @@ import UIKit
 class DetailMovieViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
-    @IBOutlet var imageCollection: UICollectionView!
+    @IBOutlet weak var imageCollection: UICollectionView!
     @IBOutlet var releaseDate: UILabel!
     @IBOutlet var overview: UITextView!
     @IBOutlet var poster: UIImageView!
     
     let api = MovieDbService()
-    let movieDetailCell: String = "detailCell"
     
     var movie: Movie?
     var imageList: [Image] = [Image]()
@@ -97,17 +96,17 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
     - parameter collectionView: UICollectionView
     - parameter section: Int
     
-    - returns: Int (max 4)
+    - returns: Int
     */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (self.imageList.count > 4) ? 4 : self.imageList.count
+        return imageList.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.movieDetailCell, forIndexPath: indexPath) as! ImageDetailCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ImageDetailCell.identifier, forIndexPath: indexPath) as! ImageDetailCell
         let row = indexPath.row
-    
+        
         cell.setCell(imageList[row])
         
         return cell
@@ -123,6 +122,7 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
         
         blurView.frame = self.poster.frame
         self.poster.addSubview(blurView)
+    
         
     }
 }

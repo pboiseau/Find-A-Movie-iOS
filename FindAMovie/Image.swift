@@ -48,12 +48,12 @@ class Image {
     
     - returns: NSURL (optional)
     */
-    func getImageURL() -> NSURL? {
+    func getImageURL(size: String = "w185") -> NSURL? {
         
         if let image = self.file_path {
             
             let api = MovieDbService()
-            let imageURL = NSURL(string: api.movieDbImageUrl + "w185/" + image)
+            let imageURL = NSURL(string: api.movieDbImageUrl + size + "/" + image)
             
             return imageURL
             
