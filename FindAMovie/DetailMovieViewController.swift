@@ -120,9 +120,7 @@ class DetailMovieViewController: UIViewController, UICollectionViewDataSource, U
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         
-        blurView.frame = self.poster.frame
-        self.poster.addSubview(blurView)
-    
-        
+        blurView.frame = poster.frame
+        poster.addSubview(blurView)
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BEq-Ur-cL6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BEq-Ur-cL6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -15,15 +15,15 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jI5-Qp-thb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT7-Eq-4Rz">
-                                <rect key="frame" x="71" y="401" width="180" height="50"/>
+                                <rect key="frame" x="211" y="401" width="180" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -41,11 +41,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fcb-Pb-SwX" kind="push" identifier="displayCategory" id="Hie-EN-OwG"/>
+                                    <segue destination="fcb-Pb-SwX" kind="show" identifier="displayCategory" id="Hie-EN-OwG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ke1-x5-rNb">
-                                <rect key="frame" x="70" y="479" width="180" height="50"/>
+                                <rect key="frame" x="210" y="479" width="180" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -63,11 +63,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="iTj-p2-Jrv" kind="push" id="T77-5Z-Yvz"/>
+                                    <segue destination="iTj-p2-Jrv" kind="show" id="T77-5Z-Yvz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This product uses the TMDb API but is not endorsed or certified by TMDb" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ci7-wq-MIi">
-                                <rect key="frame" x="35" y="502" width="250" height="46"/>
+                                <rect key="frame" x="175" y="534" width="250" height="46"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="DdR-9L-LGT"/>
@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boisson" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-9b-jeY">
-                                <rect key="frame" x="80" y="139" width="160" height="202"/>
+                                <rect key="frame" x="220" y="139" width="160" height="202"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="2c8-PK-HuF"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="470.99999999999994"/>
+            <point key="canvasLocation" x="4303.125" y="497.53521126760552"/>
         </scene>
         <!--Mes films-->
         <scene sceneID="zej-qH-W0q">
@@ -125,29 +125,29 @@
                         <viewControllerLayoutGuide type="bottom" id="9Gg-Zr-ySG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dZd-AI-stE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Tp5-aw-1WF">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="4" y="0.0" width="592" height="600"/>
                                 <animations/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HlS-tl-vHj">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="4" y="64" width="592" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="60" id="NAx-H7-8KP">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="22" width="592" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NAx-H7-8KP" id="MVa-ue-tWX">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="559" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="13u-0q-1mO" kind="push" id="wVl-Kw-Po2"/>
+                                            <segue destination="13u-0q-1mO" kind="show" id="wVl-Kw-Po2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPC-Ph-3tZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047" y="1190"/>
+            <point key="canvasLocation" x="3838.125" y="1257.0422535211267"/>
         </scene>
         <!--Detail Movie View Controller-->
         <scene sceneID="kTa-Gk-tMW">
@@ -181,19 +181,19 @@
                         <viewControllerLayoutGuide type="bottom" id="Q1i-Ls-Ze2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aYZ-Cd-C38">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="HWm-Bi-g96">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ev3-5x-7nb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de sortie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSj-bB-Lhl">
-                                <rect key="frame" x="80" y="72" width="160" height="25"/>
+                                <rect key="frame" x="220" y="72" width="160" height="25"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="S4A-9r-cd5"/>
@@ -204,7 +204,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zgw-gI-UEb">
-                                <rect key="frame" x="-4" y="368" width="328" height="180"/>
+                                <rect key="frame" x="0.0" y="368" width="600" height="212"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VxI-82-UKe">
@@ -215,7 +215,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="image_detail_cell" id="5lD-m3-cqH" customClass="ImageDetailCell" customModule="FindAMovie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="180"/>
+                                        <rect key="frame" x="0.0" y="16" width="250" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="180"/>
@@ -249,7 +249,7 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="EvO-37-88U">
-                                <rect key="frame" x="19" y="105" width="288" height="224"/>
+                                <rect key="frame" x="23" y="105" width="560" height="224"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -292,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfD-ha-NWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2476" y="1190"/>
+            <point key="canvasLocation" x="4642.5" y="1257.0422535211267"/>
         </scene>
         <!--Genres-->
         <scene sceneID="fHd-yG-8K9">
@@ -303,15 +303,15 @@
                         <viewControllerLayoutGuide type="bottom" id="Tph-9i-M30"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YFA-LG-T0r">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-HH-X7v">
-                                <rect key="frame" x="-4" y="64" width="328" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUEL GENRE DE FILM SOUHAITEZ VOUS REGARDER ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biL-0j-upW">
-                                <rect key="frame" x="35" y="72" width="250" height="55"/>
+                                <rect key="frame" x="175" y="72" width="250" height="55"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="29S-Tw-AjH"/>
@@ -322,7 +322,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-js-h9D">
-                                <rect key="frame" x="-4" y="513" width="328" height="55"/>
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -334,23 +334,23 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uFJ-tn-zTQ" kind="push" identifier="displayMovie" id="cfU-Uk-n0R"/>
+                                    <segue destination="uFJ-tn-zTQ" kind="show" identifier="displayMovie" id="cfU-Uk-n0R"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Pd-DtQ">
-                                <rect key="frame" x="-8" y="135" width="336" height="380"/>
+                                <rect key="frame" x="-4" y="135" width="608" height="412"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.094117647060000004" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="categoryCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" rowHeight="70" id="Ogi-Xb-eXd" customClass="CategoryCell" customModule="FindAMovie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22" width="336" height="70"/>
+                                        <rect key="frame" x="0.0" y="22" width="608" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ogi-Xb-eXd" id="o88-C4-aU1">
-                                            <rect key="frame" x="0.0" y="0.0" width="336" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="608" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="validate-categorie" translatesAutoresizingMaskIntoConstraints="NO" id="9Rc-yo-wZ6">
-                                                    <rect key="frame" x="283" y="17" width="35" height="35"/>
+                                                    <rect key="frame" x="555" y="17" width="35" height="35"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="pjy-Im-VAL"/>
@@ -358,7 +358,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRB-br-GSf">
-                                                    <rect key="frame" x="91" y="17" width="155" height="35"/>
+                                                    <rect key="frame" x="227" y="17" width="155" height="35"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="C13-Qz-cJk"/>
@@ -420,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ND-Pp-hjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2703" y="470.99999999999994"/>
+            <point key="canvasLocation" x="5068.125" y="497.53521126760552"/>
         </scene>
         <!--Movie View Controller-->
         <scene sceneID="Ay1-su-shP">
@@ -431,24 +431,24 @@
                         <viewControllerLayoutGuide type="bottom" id="w0M-JT-VX3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fyJ-Uy-E3C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="DJf-DV-6aE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thc-Tl-hIZ" userLabel="poster">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-54-AZO" userLabel="background_body">
-                                <rect key="frame" x="-4" y="280" width="328" height="288"/>
+                                <rect key="frame" x="0.0" y="280" width="600" height="320"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49o-eB-FJI">
-                                <rect key="frame" x="35" y="296" width="250" height="45"/>
+                                <rect key="frame" x="175" y="296" width="250" height="45"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="jG9-CS-o0q"/>
@@ -459,7 +459,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="VMx-Bn-VEE">
-                                <rect key="frame" x="16" y="348" width="288" height="134"/>
+                                <rect key="frame" x="20" y="348" width="560" height="166"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -467,7 +467,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-Bf-aOG">
-                                <rect key="frame" x="214" y="498" width="45" height="45"/>
+                                <rect key="frame" x="490" y="530" width="45" height="45"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="QZW-CT-7c2"/>
@@ -481,7 +481,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZg-Qy-Bba">
-                                <rect key="frame" x="66" y="498" width="45" height="45"/>
+                                <rect key="frame" x="70" y="530" width="45" height="45"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="7f9-Ah-Ihs"/>
@@ -495,7 +495,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxq-Hc-bn8">
-                                <rect key="frame" x="128" y="488" width="65" height="65"/>
+                                <rect key="frame" x="268" y="520" width="65" height="65"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Q5p-Hw-XW9"/>
@@ -505,7 +505,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="13u-0q-1mO" kind="push" identifier="showMovieDetail" id="ehN-GB-51M"/>
+                                    <segue destination="13u-0q-1mO" kind="show" identifier="showMovieDetail" id="ehN-GB-51M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -548,7 +548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mG3-aM-LjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3117" y="470.99999999999994"/>
+            <point key="canvasLocation" x="5844.375" y="497.53521126760552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H9m-fQ-xGa">
@@ -572,7 +572,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiY-Cz-6Iq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="470.99999999999994"/>
+            <point key="canvasLocation" x="3448.125" y="497.53521126760552"/>
         </scene>
     </scenes>
     <resources>
