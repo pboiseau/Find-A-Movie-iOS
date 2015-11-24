@@ -468,7 +468,7 @@
             </objects>
             <point key="canvasLocation" x="5068" y="497"/>
         </scene>
-        <!--Movie View Controller-->
+        <!--Film-->
         <scene sceneID="Ay1-su-shP">
             <objects>
                 <viewController id="uFJ-tn-zTQ" customClass="MovieViewController" customModule="FindAMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -585,7 +585,7 @@
                             <constraint firstItem="49o-eB-FJI" firstAttribute="top" secondItem="RJw-Uh-JU0" secondAttribute="bottom" constant="232" id="yD7-az-fk8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="L7Y-gX-jfe"/>
+                    <navigationItem key="navigationItem" title="Film" id="L7Y-gX-jfe"/>
                     <connections>
                         <outlet property="movieDescription" destination="VMx-Bn-VEE" id="rJN-b0-fxO"/>
                         <outlet property="moviePoster" destination="thc-Tl-hIZ" id="6Cz-Xz-Fe5"/>
