@@ -14,7 +14,8 @@ import UIKit
 class CategoryCell: UITableViewCell {
     
     @IBOutlet var categoryTitle: UILabel!
-    
+
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet var status: UIImageView!
     
     override func awakeFromNib() {
@@ -41,6 +42,9 @@ class CategoryCell: UITableViewCell {
         self.categoryTitle.text = categoryTitle
         self.status.hidden = !categoryStatus
         
+        if let imageKey = Categories.images[categoryTitle.lowercaseString] {
+            self.backgroundImage.image = UIImage(named: imageKey)
+        }
     }
     
     /**
