@@ -13,6 +13,29 @@ import Foundation
 */
 class Categories: NSObject {
     
+    static let images = [
+        "action": "action",
+        "aventure": "aventure",
+        "animation": "animation",
+        "comédie": "comedie",
+        "crime": "crime",
+        "documentaire": "documentaire",
+        "drame": "drame",
+        "familial": "familial",
+        "fantastique": "fantastique",
+        "etrange": "etrange",
+        "histoire": "histoire",
+        "horreur": "horreur",
+        "musique": "musique",
+        "mystère": "mystere",
+        "romance": "romance",
+        "science-fiction": "science-fiction",
+        "téléfilm": "telefilm",
+        "thriller": "thriller",
+        "guerre": "guerre",
+        "western": "western"
+    ]
+    
     var list: [Category] = [Category]()
     var currentList: [Int] = [Int]()
   
@@ -33,7 +56,7 @@ class Categories: NSObject {
             let name = category["name"] as! String
             
             list.append(Category(id: id, name: name))
-            
+
         }
         
     }
