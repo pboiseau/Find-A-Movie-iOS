@@ -14,7 +14,9 @@ import Haneke
 */
 class ImageDetailCell: UICollectionViewCell {
     
-    @IBOutlet var imageDetail: UIImageView!
+    static let identifier = "image_detail_cell"
+    
+    @IBOutlet weak var imageDetail: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,8 +28,8 @@ class ImageDetailCell: UICollectionViewCell {
     - parameter image: Image
     */
     func setCell(image: Image){
-        
-        if let path = image.getImageURL() {
+    
+        if let path = image.getImageURL("w342") {
             
             self.imageDetail.hnk_setImageFromURL(path) {
                 (let fetchImage) in
