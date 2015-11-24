@@ -31,6 +31,7 @@
 		6B5CB60F1B1DBBEF00CA9F38 /* FindAMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */; };
 		6B60C4261C03BDF20029E01A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B60C4251C03BDF20029E01A /* App.plist */; };
 		6B8206891B20A7C900FB26DE /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8206881B20A7C900FB26DE /* MovieViewController.swift */; };
+		6BA7A4501C04B0C500FE82D3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */; };
 		6BB4DADF1BFA03A9003385C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4DADE1BFA03A9003385C3 /* Default-568h@2x.png */; };
 		6BD5786E1B1DDCE4000A77DF /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5786D1B1DDCE4000A77DF /* CategoryViewController.swift */; };
 		6BD578741B1E2A97000A77DF /* MovieDbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD578731B1E2A97000A77DF /* MovieDbService.swift */; };
@@ -92,6 +93,7 @@
 		6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAMovieTests.swift; sourceTree = "<group>"; };
 		6B60C4251C03BDF20029E01A /* App.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
 		6B8206881B20A7C900FB26DE /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		6BB4DADE1BFA03A9003385C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6BB4DAE01BFA075E003385C3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
 		6BB4DAE51BFA0971003385C3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm.framework"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				6B57E5CE1B277C4000583D69 /* Haneke.framework in Frameworks */,
 				6B57E5CA1B27776900583D69 /* CoreData.framework in Frameworks */,
 				6B43025E1B1F464D00365B35 /* Alamofire.framework in Frameworks */,
+				6BA7A4501C04B0C500FE82D3 /* SwiftyJSON.framework in Frameworks */,
 				19272BC5C46A6C1D809102C7 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +135,7 @@
 		11328B68B9AC7CBF854D34B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */,
 				6BB4DAE91BFA0A17003385C3 /* Realm.framework */,
 				6BB4DAEA1BFA0A17003385C3 /* RealmSwift.framework */,
 				6BB4DAE51BFA0971003385C3 /* Realm.framework */,
@@ -205,6 +209,7 @@
 		6B5CB5F51B1DBBEF00CA9F38 /* FindAMovie */ = {
 			isa = PBXGroup;
 			children = (
+				6BA7A4511C04B11F00FE82D3 /* Network */,
 				6B57E5C81B27752700583D69 /* Data */,
 				6BFF48A21B259FA6008542A9 /* ViewExtension */,
 				6B0919551B208E5600A9B70E /* TableView */,
@@ -245,6 +250,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6BA7A4511C04B11F00FE82D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6B2FFD0B1B1F682300ED2445 /* NetworkOperation.swift */,
+				6BD578731B1E2A97000A77DF /* MovieDbService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		6BF50B8B1B1DC04F00456063 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,11 +274,9 @@
 		6BF50B8C1B1DC05600456063 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6BD578731B1E2A97000A77DF /* MovieDbService.swift */,
 				6B460A931B1E378B00D83873 /* Category.swift */,
 				6B460A951B1E3F2700D83873 /* Movie.swift */,
 				6B43025F1B1F59CC00365B35 /* Categories.swift */,
-				6B2FFD0B1B1F682300ED2445 /* NetworkOperation.swift */,
 				6BFF48A01B22FED4008542A9 /* Movies.swift */,
 				6B57E5D11B2999CB00583D69 /* Images.swift */,
 				6B57E5D31B299A9900583D69 /* Image.swift */,
