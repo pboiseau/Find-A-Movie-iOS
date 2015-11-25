@@ -14,10 +14,10 @@ import Foundation
  */
 class MovieDbService {
     
-    let apiKey = "061aa72cb2da19956a42cf429bbe0e0d"
-    let language = "fr"
-    let movieDbBaseUrl = "https://api.themoviedb.org/3/"
-    let movieDbImageUrl = "https://image.tmdb.org/t/p/"
+    let apiKey = NSBundle.mainBundle().objectForInfoDictionaryKey("Api Key") as! String
+    let language = NSBundle.mainBundle().objectForInfoDictionaryKey("Api Language") as! String
+    let movieDbBaseUrl = NSBundle.mainBundle().objectForInfoDictionaryKey("Api Base Url") as! String
+    let movieDbImageUrl = NSBundle.mainBundle().objectForInfoDictionaryKey("Api Image Url") as! String
     
     /**
      Retrieve categories from TMDB API

@@ -29,7 +29,7 @@ class ImageDetailCell: UICollectionViewCell {
     */
     func setCell(image: Image){
     
-        if let path = image.getImageURL("w342") {
+        if let path = image.getImageURL(size: "w342") {
             
             self.imageDetail.hnk_setImageFromURL(path) {
                 (let fetchImage) in

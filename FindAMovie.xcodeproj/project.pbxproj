@@ -29,10 +29,8 @@
 		6B5CB6001B1DBBEF00CA9F38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CB5FF1B1DBBEF00CA9F38 /* Images.xcassets */; };
 		6B5CB6031B1DBBEF00CA9F38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CB6011B1DBBEF00CA9F38 /* LaunchScreen.xib */; };
 		6B5CB60F1B1DBBEF00CA9F38 /* FindAMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */; };
-		6B60C4261C03BDF20029E01A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B60C4251C03BDF20029E01A /* App.plist */; };
 		6B8206891B20A7C900FB26DE /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8206881B20A7C900FB26DE /* MovieViewController.swift */; };
 		6BA7A4501C04B0C500FE82D3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */; };
-		6BB4DADF1BFA03A9003385C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4DADE1BFA03A9003385C3 /* Default-568h@2x.png */; };
 		6BD5786E1B1DDCE4000A77DF /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5786D1B1DDCE4000A77DF /* CategoryViewController.swift */; };
 		6BD578741B1E2A97000A77DF /* MovieDbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD578731B1E2A97000A77DF /* MovieDbService.swift */; };
 		6BFF48A11B22FED4008542A9 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF48A01B22FED4008542A9 /* Movies.swift */; };
@@ -91,10 +89,8 @@
 		6B5CB6081B1DBBEF00CA9F38 /* FindAMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindAMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5CB60D1B1DBBEF00CA9F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAMovieTests.swift; sourceTree = "<group>"; };
-		6B60C4251C03BDF20029E01A /* App.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
 		6B8206881B20A7C900FB26DE /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		6BB4DADE1BFA03A9003385C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6BB4DAE01BFA075E003385C3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
 		6BB4DAE51BFA0971003385C3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm.framework"; sourceTree = "<group>"; };
 		6BB4DAE61BFA0971003385C3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
@@ -187,7 +183,6 @@
 		6B5CB5EA1B1DBBEF00CA9F38 = {
 			isa = PBXGroup;
 			children = (
-				6BB4DADE1BFA03A9003385C3 /* Default-568h@2x.png */,
 				6B460A911B1E310200D83873 /* Playground */,
 				6B5CB5F51B1DBBEF00CA9F38 /* FindAMovie */,
 				6B5CB60B1B1DBBEF00CA9F38 /* FindAMovieTests */,
@@ -228,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				6B5CB5F71B1DBBEF00CA9F38 /* Info.plist */,
-				6B60C4251C03BDF20029E01A /* App.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -380,9 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5CB5FE1B1DBBEF00CA9F38 /* Main.storyboard in Resources */,
-				6BB4DADF1BFA03A9003385C3 /* Default-568h@2x.png in Resources */,
 				6B5CB6031B1DBBEF00CA9F38 /* LaunchScreen.xib in Resources */,
-				6B60C4261C03BDF20029E01A /* App.plist in Resources */,
 				6B5CB6001B1DBBEF00CA9F38 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

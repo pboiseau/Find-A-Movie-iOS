@@ -48,7 +48,7 @@ class Image {
     
     - returns: NSURL (optional)
     */
-    func getImageURL(size: String = "w185") -> NSURL? {
+    func getImageURL(size size: String = "w185") -> NSURL? {
         
         if let image = self.file_path {
             
