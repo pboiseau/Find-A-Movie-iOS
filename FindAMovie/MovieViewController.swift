@@ -11,17 +11,15 @@ import UIKit
 import Haneke
 
 /**
-*  Movie View Controller
-*/
+ *  Movie View Controller
+ */
 class MovieViewController: UIViewController {
     
     @IBOutlet var movieTitle: UILabel!
-    
     @IBOutlet var moviePoster: UIImageView!
-    
     @IBOutlet var movieDescription: UITextView!
     
-    var categories: Categories?
+    var categories: Categories!
     var movies: Movies?
     
     var current_page: Int = 0
@@ -29,13 +27,12 @@ class MovieViewController: UIViewController {
     let api = MovieDbService()
     
     /**
-    Retrieve movies from Movie Db Service after loading the view filter by categories
-    */
+     Retrieve movies from Movie Db Service after loading the view filter by categories
+     */
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        self.navigationController?.navigationBarHidden = true
         self.movieDescription.editable = false
         
         // left swipe
@@ -61,22 +58,39 @@ class MovieViewController: UIViewController {
     }
     
     /**
-    Hide the navigation bar
-    
-    - parameter animated: Bool
-    */
+     Hide the navigation bar
+     
+     - parameter animated: Bool
+     */
     override func viewWillAppear(animated: Bool) {
         
-        self.navigationController?.navigationBarHidden = false
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
+        navigationBarTitle()
+        
+        navigationController?.navigationBarHidden = false
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.translucent = true
         
     }
     
     /**
-    Fetch the next movies from the API using the page number
-    */
+    Set navigation bar title to categories name
+     */
+    func navigationBarTitle() -> Void {
+        var title = ""
+        
+        for category in (categories.list) {
+            if categories.currentList.contains(category.id) {
+                title += "\(category.name) "
+            }
+        }
+        
+        navigationItem.title = title
+    }
+    
+    /**
+     Fetch the next movies from the API using the page number
+     */
     func fetchNextMovies() {
         
         if let genres = self.categories?.listToString(type: "AND"){
@@ -101,20 +115,20 @@ class MovieViewController: UIViewController {
     }
     
     /**
-    Get the next page of the API results
-    
-    - returns: Int
-    */
+     Get the next page of the API results
+     
+     - returns: Int
+     */
     func getNextPage() -> Int {
         let page = (++current_page <= movies!.total_pages) ? current_page : 1
         return page
     }
     
     /**
-    Handler to detect swipe and execute action
-    
-    - parameter sender:
-    */
+     Handler to detect swipe and execute action
+     
+     - parameter sender:
+     */
     func handleSwipes(sender: UISwipeGestureRecognizer) {
         
         if sender.direction == .Left {
@@ -129,10 +143,10 @@ class MovieViewController: UIViewController {
     
     
     /**
-    Fetch the next movies from the movies object
-    
-    - parameter sender:
-    */
+     Fetch the next movies from the movies object
+     
+     - parameter sender:
+     */
     @IBAction func nextMovie(sender: UIButton?) {
         
         if let nextMovie = movies!.next() {
@@ -163,8 +177,8 @@ class MovieViewController: UIViewController {
     
     
     /**
-    Fetch the previous movies from the movies object
-    */
+     Fetch the previous movies from the movies object
+     */
     func prevMovie() {
         
         if let prevMovie = movies!.prev() {
@@ -186,11 +200,11 @@ class MovieViewController: UIViewController {
     }
     
     /**
-    Print alert info for user when no movies was found on the MovieDBService
-    
-    - parameter title:   String
-    - parameter message: String
-    */
+     Print alert info for user when no movies was found on the MovieDBService
+     
+     - parameter title:   String
+     - parameter message: String
+     */
     func setAlert(title: String, message: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
@@ -201,20 +215,20 @@ class MovieViewController: UIViewController {
     }
     
     /**
-    Catch like button press and store movie on the database
-    
-    - parameter sender: UIButton
-    */
+     Catch like button press and store movie on the database
+     
+     - parameter sender: UIButton
+     */
     @IBAction func likeMovie(sender: UIButton) {
         print("we need to save the movie in the database")
     }
     
     /**
-    Send Movie Object to the Detail View Controller
-    
-    - parameter segue:  UIStoryboardSegue
-    - parameter sender: AnyObject
-    */
+     Send Movie Object to the Detail View Controller
+     
+     - parameter segue:  UIStoryboardSegue
+     - parameter sender: AnyObject
+     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "showMovieDetail" {

@@ -36,7 +36,7 @@ class Categories: NSObject {
         "western": "western"
     ]
     
-    var list: [Category] = [Category]()
+    var list: [Category]! = [Category]()
     var currentList: [Int] = [Int]()
   
     /**
@@ -45,9 +45,6 @@ class Categories: NSObject {
     - parameter categoriesDictionary: [String: AnyObject]
     */
     init(categoriesDictionary: [String: AnyObject]) {
-        
-        self.list = [Category]()
-        
         let categories = categoriesDictionary["genres"] as! [[String:AnyObject]]
         
         for category in categories {
@@ -56,13 +53,12 @@ class Categories: NSObject {
             let name = category["name"] as! String
             
             list.append(Category(id: id, name: name))
-
         }
         
     }
     
     /**
-    Return a list of categories in string separated by commo
+    Return a list of categories in string separated by comma
     
     - parameter type: String
     - returns: String

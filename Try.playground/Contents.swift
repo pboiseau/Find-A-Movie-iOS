@@ -116,6 +116,13 @@ var max_page = 7
 
 let page = (++current_page <= max_page) ? current_page : 1
 
+NSBundle.mainBundle().objectForInfoDictionaryKey("api_base_url")
+
+
+
+
+
+
 
 
 

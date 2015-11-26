@@ -1,5 +1,11 @@
 import Foundation
 import Alamofire
+import SwiftyJSON
+
+enum NetworkError: ErrorType {
+    case NetworkFailure
+    case EmptyResult
+}
 
 /**
  *  Network Operation class to perform webservice request
@@ -8,7 +14,7 @@ class NetworkOperation {
     
     let queryURL: String
     
-    typealias JSONDictionaryCompletion = ([String: AnyObject]? -> Void)
+    typealias JSONDictionaryCompletion = ([String: AnyObject]?, ErrorType?) -> (Void)
     
     /**
      Initialize NetworkOperation
@@ -24,27 +30,25 @@ class NetworkOperation {
      
      - parameter completion: Callback to retour JSON Dictionnary
      */
-    func executeRequest(completion: JSONDictionaryCompletion) {
+    func executeRequest(completionHandler: JSONDictionaryCompletion) {
         
         Alamofire
             .request(.GET, self.queryURL)
             .responseJSON {
-                response in
+                (response) in
                 
-                if let httpResponse = response.response {
-                    
-                    switch httpResponse.statusCode {
-                    case 200:
-                        let jsonDictionary = response.result.value as? [String: AnyObject]
-                        
-                        completion(jsonDictionary)
-                    default:
-                        print("GET request not successful. HTTP status code: \(httpResponse.statusCode)")
+                switch response.result {
+                case .Success:
+                    guard let value = response.result.value else {
+                        return completionHandler(nil, NetworkError.EmptyResult)
                     }
                     
-                } else {
-                    print("Error: Not a valid HTTP response")
-                    completion(nil)
+                    let jsonDictionary = value as? [String: AnyObject]
+                    completionHandler(jsonDictionary, nil)
+                    
+                case .Failure(let error):
+                    print(error)
+                    completionHandler(nil, NetworkError.NetworkFailure)
                 }
         }
         

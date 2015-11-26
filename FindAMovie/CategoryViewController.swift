@@ -58,6 +58,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.navigationBarHidden = false
     }
     
+    // MARK: - Data source methods
+    
     /**
     Set the default number of sections in the table view
     
@@ -138,6 +140,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
     }
+    
+    // MARK: - Navigation methods
     
     /**
     Send categories to the Movie View Controller
