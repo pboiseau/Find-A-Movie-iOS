@@ -14,7 +14,7 @@ import UIKit
 class CategoryCell: UITableViewCell {
     
     @IBOutlet var categoryTitle: UILabel!
-
+    @IBOutlet weak var imageOverlay: UIImageView!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet var status: UIImageView!
     
@@ -37,13 +37,13 @@ class CategoryCell: UITableViewCell {
     - parameter categoryTitle:: String
     - parameter categoryStatus:: Bool
     */
-    func setCell(categoryTitle: String, categoryStatus: Bool) {
+    func setCell(title categoryTitle: String, status categoryStatus: Bool) {
         
         self.categoryTitle.text = categoryTitle
-        self.status.hidden = !categoryStatus
+        status.hidden = !categoryStatus
         
         if let imageKey = Categories.images[categoryTitle.lowercaseString] {
-            self.backgroundImage.image = UIImage(named: imageKey)
+            backgroundImage.image = UIImage(named: imageKey)
         }
     }
     
@@ -53,7 +53,10 @@ class CategoryCell: UITableViewCell {
     - parameter state:: Bool
     */
     func switchCategoryState(state: Bool) {
-        self.status.hidden = !state
+        status.hidden = !state
+        
+        let alpha: CGFloat = (state) ? 0.2 : 0.5
+        imageOverlay.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(alpha)
     }
 
 }

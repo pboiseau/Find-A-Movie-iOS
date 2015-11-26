@@ -428,6 +428,7 @@
                                         <connections>
                                             <outlet property="backgroundImage" destination="0nG-FI-ihc" id="xQ5-FL-QLH"/>
                                             <outlet property="categoryTitle" destination="MRB-br-GSf" id="4gl-4f-J1q"/>
+                                            <outlet property="imageOverlay" destination="pVO-4v-YtC" id="J9L-wy-dbZ"/>
                                             <outlet property="status" destination="9Rc-yo-wZ6" id="psl-9N-dsE"/>
                                         </connections>
                                     </tableViewCell>

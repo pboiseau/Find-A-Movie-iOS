@@ -98,9 +98,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         let row = indexPath.row
         
         if(selectedRow.count == categoriesList.count && selectedRow[row]){
-            cell.setCell(categoriesList[row].name, categoryStatus: true)
+            cell.setCell(title: categoriesList[row].name, status: true)
         } else {
-            cell.setCell(categoriesList[row].name, categoryStatus: false)
+            cell.setCell(title: categoriesList[row].name, status: false)
         }
         
         return cell
