@@ -9,8 +9,8 @@
 import Foundation
 
 /**
-*  Movies class
-*/
+ *  Movies class
+ */
 class Movies: NSObject {
     
     var list: [Movie] = [Movie]()
@@ -24,11 +24,11 @@ class Movies: NSObject {
     private var current: Movie?
     
     /**
-    Initialize a new movies object
-    
-    - parameter moviesDictionary: [String: AnyObject]
-    - parameter genres:           String
-    */
+     Initialize a new movies object
+     
+     - parameter moviesDictionary: [String: AnyObject]
+     - parameter genres:           String
+     */
     init(moviesDictionary: [String: AnyObject], genres: String) {
         
         let movies = moviesDictionary["results"] as! [[String:AnyObject]]
@@ -55,10 +55,10 @@ class Movies: NSObject {
     }
     
     /**
-    Get current movie on the iterator
-    
-    - returns: Movie
-    */
+     Get current movie on the iterator
+     
+     - returns: Movie
+     */
     func getCurrent() -> Movie? {
         if (current != nil) {
             return current
@@ -68,10 +68,10 @@ class Movies: NSObject {
     }
     
     /**
-    Iterator to the next movie in the list
-    
-    - returns: Movie
-    */
+     Iterator to the next movie in the list
+     
+     - returns: Movie
+     */
     func next() -> Movie? {
         
         if let movie = self.iterator.next() {
@@ -84,10 +84,10 @@ class Movies: NSObject {
     }
     
     /**
-    Return the previous movie from the list
-    
-    - returns: Movie
-    */
+     Return the previous movie from the list
+     
+     - returns: Movie
+     */
     func prev() -> Movie? {
         
         if self.list.count == 0 {
