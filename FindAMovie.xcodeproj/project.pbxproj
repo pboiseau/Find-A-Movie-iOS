@@ -10,15 +10,18 @@
 		19272BC5C46A6C1D809102C7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1703331C0ECF28BDD8B002B /* Pods.framework */; };
 		6B0919571B2095E000A9B70E /* CategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0919561B2095E000A9B70E /* CategoryTableView.swift */; };
 		6B2FFD0C1B1F682300ED2445 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2FFD0B1B1F682300ED2445 /* NetworkOperation.swift */; };
-		6B43025E1B1F464D00365B35 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B43025D1B1F464D00365B35 /* Alamofire.framework */; };
 		6B4302601B1F59CC00365B35 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B43025F1B1F59CC00365B35 /* Categories.swift */; };
 		6B460A941B1E378B00D83873 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B460A931B1E378B00D83873 /* Category.swift */; };
 		6B460A961B1E3F2700D83873 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B460A951B1E3F2700D83873 /* Movie.swift */; };
+		6B4BEE911C8AFD4C006D2862 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4BEE8C1C8AFD4C006D2862 /* Alamofire.framework */; };
+		6B4BEE921C8AFD4C006D2862 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4BEE8D1C8AFD4C006D2862 /* Haneke.framework */; };
+		6B4BEE931C8AFD4C006D2862 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4BEE8E1C8AFD4C006D2862 /* Realm.framework */; };
+		6B4BEE941C8AFD4C006D2862 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4BEE8F1C8AFD4C006D2862 /* RealmSwift.framework */; };
+		6B4BEE951C8AFD4C006D2862 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4BEE901C8AFD4C006D2862 /* SwiftyJSON.framework */; };
 		6B57E5C51B276B3600583D69 /* FindAMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B57E5C31B276B3600583D69 /* FindAMovie.xcdatamodeld */; };
 		6B57E5C71B27708900583D69 /* SavedMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57E5C61B27708900583D69 /* SavedMovieViewController.swift */; };
 		6B57E5CA1B27776900583D69 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B57E5C91B27776900583D69 /* CoreData.framework */; };
 		6B57E5CC1B277ACA00583D69 /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57E5CB1B277ACA00583D69 /* DetailMovieViewController.swift */; };
-		6B57E5CE1B277C4000583D69 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B57E5CD1B277C4000583D69 /* Haneke.framework */; };
 		6B57E5D01B289F1C00583D69 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57E5CF1B289F1C00583D69 /* CategoryCell.swift */; };
 		6B57E5D21B2999CB00583D69 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57E5D11B2999CB00583D69 /* Images.swift */; };
 		6B57E5D41B299A9900583D69 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B57E5D31B299A9900583D69 /* Image.swift */; };
@@ -30,7 +33,6 @@
 		6B5CB6031B1DBBEF00CA9F38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CB6011B1DBBEF00CA9F38 /* LaunchScreen.xib */; };
 		6B5CB60F1B1DBBEF00CA9F38 /* FindAMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */; };
 		6B8206891B20A7C900FB26DE /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8206881B20A7C900FB26DE /* MovieViewController.swift */; };
-		6BA7A4501C04B0C500FE82D3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */; };
 		6BD5786E1B1DDCE4000A77DF /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5786D1B1DDCE4000A77DF /* CategoryViewController.swift */; };
 		6BD578741B1E2A97000A77DF /* MovieDbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD578731B1E2A97000A77DF /* MovieDbService.swift */; };
 		6BFF48A11B22FED4008542A9 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF48A01B22FED4008542A9 /* Movies.swift */; };
@@ -63,16 +65,19 @@
 /* Begin PBXFileReference section */
 		6B0919561B2095E000A9B70E /* CategoryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableView.swift; sourceTree = "<group>"; };
 		6B2FFD0B1B1F682300ED2445 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
-		6B43025D1B1F464D00365B35 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods/Alamofire.framework"; sourceTree = "<group>"; };
 		6B43025F1B1F59CC00365B35 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		6B460A921B1E311A00D83873 /* Try.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Try.playground; sourceTree = "<group>"; };
 		6B460A931B1E378B00D83873 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6B460A951B1E3F2700D83873 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		6B4BEE8C1C8AFD4C006D2862 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		6B4BEE8D1C8AFD4C006D2862 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = "Pods/../build/Debug-iphoneos/Haneke.framework"; sourceTree = "<group>"; };
+		6B4BEE8E1C8AFD4C006D2862 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm.framework"; sourceTree = "<group>"; };
+		6B4BEE8F1C8AFD4C006D2862 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
+		6B4BEE901C8AFD4C006D2862 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		6B57E5C41B276B3600583D69 /* FindAMovie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindAMovie.xcdatamodel; sourceTree = "<group>"; };
 		6B57E5C61B27708900583D69 /* SavedMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedMovieViewController.swift; sourceTree = "<group>"; };
 		6B57E5C91B27776900583D69 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B57E5CB1B277ACA00583D69 /* DetailMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
-		6B57E5CD1B277C4000583D69 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = "Pods/../build/Debug-iphoneos/Pods/Haneke.framework"; sourceTree = "<group>"; };
 		6B57E5CF1B289F1C00583D69 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		6B57E5D11B2999CB00583D69 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		6B57E5D31B299A9900583D69 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -90,12 +95,6 @@
 		6B5CB60D1B1DBBEF00CA9F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B5CB60E1B1DBBEF00CA9F38 /* FindAMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAMovieTests.swift; sourceTree = "<group>"; };
 		6B8206881B20A7C900FB26DE /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
-		6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		6BB4DAE01BFA075E003385C3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
-		6BB4DAE51BFA0971003385C3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm.framework"; sourceTree = "<group>"; };
-		6BB4DAE61BFA0971003385C3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
-		6BB4DAE91BFA0A17003385C3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm.framework"; sourceTree = "<group>"; };
-		6BB4DAEA1BFA0A17003385C3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
 		6BD5786D1B1DDCE4000A77DF /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6BD578731B1E2A97000A77DF /* MovieDbService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDbService.swift; sourceTree = "<group>"; };
 		6BFF48A01B22FED4008542A9 /* Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
@@ -110,10 +109,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B57E5CE1B277C4000583D69 /* Haneke.framework in Frameworks */,
+				6B4BEE911C8AFD4C006D2862 /* Alamofire.framework in Frameworks */,
+				6B4BEE921C8AFD4C006D2862 /* Haneke.framework in Frameworks */,
+				6B4BEE931C8AFD4C006D2862 /* Realm.framework in Frameworks */,
+				6B4BEE941C8AFD4C006D2862 /* RealmSwift.framework in Frameworks */,
+				6B4BEE951C8AFD4C006D2862 /* SwiftyJSON.framework in Frameworks */,
 				6B57E5CA1B27776900583D69 /* CoreData.framework in Frameworks */,
-				6B43025E1B1F464D00365B35 /* Alamofire.framework in Frameworks */,
-				6BA7A4501C04B0C500FE82D3 /* SwiftyJSON.framework in Frameworks */,
 				19272BC5C46A6C1D809102C7 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,15 +132,12 @@
 		11328B68B9AC7CBF854D34B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BA7A44F1C04B0C500FE82D3 /* SwiftyJSON.framework */,
-				6BB4DAE91BFA0A17003385C3 /* Realm.framework */,
-				6BB4DAEA1BFA0A17003385C3 /* RealmSwift.framework */,
-				6BB4DAE51BFA0971003385C3 /* Realm.framework */,
-				6BB4DAE61BFA0971003385C3 /* RealmSwift.framework */,
-				6BB4DAE01BFA075E003385C3 /* RealmSwift.framework */,
-				6B57E5CD1B277C4000583D69 /* Haneke.framework */,
+				6B4BEE8C1C8AFD4C006D2862 /* Alamofire.framework */,
+				6B4BEE8D1C8AFD4C006D2862 /* Haneke.framework */,
+				6B4BEE8E1C8AFD4C006D2862 /* Realm.framework */,
+				6B4BEE8F1C8AFD4C006D2862 /* RealmSwift.framework */,
+				6B4BEE901C8AFD4C006D2862 /* SwiftyJSON.framework */,
 				6B57E5C91B27776900583D69 /* CoreData.framework */,
-				6B43025D1B1F464D00365B35 /* Alamofire.framework */,
 				A1703331C0ECF28BDD8B002B /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -341,7 +339,7 @@
 				TargetAttributes = {
 					6B5CB5F21B1DBBEF00CA9F38 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = HV4W59R5LD;
+						DevelopmentTeam = 99D895TFL2;
 					};
 					6B5CB6071B1DBBEF00CA9F38 = {
 						CreatedOnToolsVersion = 6.3.2;

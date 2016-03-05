@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // status bar text color white
         //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-    
+        Fabric.with([Crashlytics.self, Answers.self])
+        
         return true
     }
     

@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Fabric</key>
+	<dict>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+		<key>APIKey</key>
+		<string>118998f296ed8993d515d773259c9155da3bfc48</string>
+	</dict>
 	<key>Api Base Url</key>
 	<string>https://api.themoviedb.org/3/</string>
 	<key>Api Image Url</key>
@@ -23,7 +35,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
