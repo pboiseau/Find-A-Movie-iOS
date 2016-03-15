@@ -10,8 +10,8 @@ import UIKit
 import Alamofire
 
 /**
-*  Category View Controller
-*/
+ *  Category View Controller
+ */
 class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var categoryTableView: UITableView!
@@ -25,8 +25,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     var selectedRow: [Bool] = [Bool]()
     
     /**
-    Retrieve categories from Movie Db Service after loading the view
-    */
+     Retrieve categories from Movie Db Service after loading the view
+     */
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -55,7 +55,10 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
+        navigationController?.navigationBarHidden = false
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.translucent = true
     }
     
     // MARK: - Data source methods
@@ -72,27 +75,26 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     /**
-    Return the number of elements in the table view
-    
-    - parameter tableView: UITableView
-    - parameter section: Int
-    
-    - returns: Int
-    */
+     Return the number of elements in the table view
+     
+     - parameter tableView: UITableView
+     - parameter section: Int
+     
+     - returns: Int
+     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoriesList.count
     }
     
     /**
-    Generate and set the content of each cell in the table view
-    
-    - parameter tableView: UITableView
-    - parameter indexPath: NSIndexPath
-    
-    - returns: UITableViewCell
-    */
+     Generate and set the content of each cell in the table view
+     
+     - parameter tableView: UITableView
+     - parameter indexPath: NSIndexPath
+     
+     - returns: UITableViewCell
+     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
         
         let cell = tableView.dequeueReusableCellWithIdentifier(categoryCell, forIndexPath: indexPath) as! CategoryCell
         let row = indexPath.row
@@ -108,11 +110,11 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     /**
-    Set category when user touch a cell
-    
-    - parameter tableView: UITableView
-    - parameter indexPath: NSIndexPath
-    */
+     Set category when user touch a cell
+     
+     - parameter tableView: UITableView
+     - parameter indexPath: NSIndexPath
+     */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

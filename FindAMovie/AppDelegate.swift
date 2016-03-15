@@ -18,9 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        // status bar text color white
-        //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         Fabric.with([Crashlytics.self, Answers.self])
+        
+        // status bar text color white
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        //UIStatusBarStyle.LightContent
         
         return true
     }

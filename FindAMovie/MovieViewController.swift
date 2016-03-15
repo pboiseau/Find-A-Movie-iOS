@@ -63,18 +63,11 @@ class MovieViewController: UIViewController {
      - parameter animated: Bool
      */
     override func viewWillAppear(animated: Bool) {
-        
         navigationBarTitle()
-        
-        navigationController?.navigationBarHidden = false
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.translucent = true
-        
     }
     
     /**
-    Set navigation bar title to categories name
+     Set navigation bar title to categories name
      */
     func navigationBarTitle() -> Void {
         var title = ""
